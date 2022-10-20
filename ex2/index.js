@@ -1,12 +1,12 @@
 
 function imprime (){
-    entrada= document.getElementById("entrada")
-    valor= entrada.value
-    if (valor.length>=3){
-        y="<strong>palavra:</strong>"+valor+"<br><strong>tamanho:</strong>"+valor.length       
-        x = document.getElementById("saida").innerHTML = y;
+    entrada1= document.getElementById("entrada1").value
+    entrada2= document.getElementById("entrada2").value
+    if (entrada1.length>entrada2.length){
+        document.getElementById("saida").innerHTML= "A primeira palavra é maior que a segunda.";
+    }else if (entrada1.length<entrada2.length){
+        document.getElementById("saida").innerHTML= "A segunda palavra é maior que a primeira.";
     }else{
-        z="tem menos de 3 caracteres"
-        document.getElementById("saida").innerHTML = z;
+        document.getElementById("saida").innerHTML= "As duas palavras tem o mesmo tamanho.";
     }
 }
