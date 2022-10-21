@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="card">
+            <h2 id="titulo">Calcular IMC</h2>
+            <input type="text" class="caixa" id="valorPeso" placeholder="insira o seu peso">
+            <input type="text" class="caixa" id="valorAltura" placeholder="insira sua altura em metros">
+            <input type="button" value="Calcular" onclick="calcula_IMC()">
+            <p id="saida"></p>
+        </div>
+        <div class="card">
+            <h2 id="titulo">Escolha aleatória entre 2 números</h2>
+            <input type="text" class="caixa" id="numMenor" placeholder="insira o menor número">
+            <input type="text" class="caixa" id="numMaior" placeholder="insira o maior número">
+            <input type="button" value="Calcular" onclick="numRandom()">
+            <p id="saida2"></p>
+        </div>
+        <div class="card">
+            <h2 id="titulo">Número de cima e o abaixo</h2>
+            <input type="text" class="caixa" id="numFloat" placeholder="insira um número decimal">
+            <input type="button" value="Calcular" onclick="imprime()">
+            <p id="saida3"></p>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
