@@ -5,19 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <a>Exercício 3</a><br>
-    <input type="number" id="num1">
-    <select id="operador" name="operador">
-        <option value="soma">Soma</option>
-        <option value="sub">Subtração</option>
-        <option value="divisao">Divisão</option>
-        <option value="multi">Multiplicação</option>
-    </select>
-    <input type="number" id="num2">
-    <input type="button" value="resultado" onclick="resultado()">
-    <br><p id="saida"></p>
+    <div class="row">
+        <div class="card">        
+            <h2 id="titulo">Exercício 3</h2><br>
+            <input class="caixa" type="number" id="num1" autocomplete="off">
+            <select class="caixa" id="operador" name="operador">
+                <option value="soma">Soma</option>
+                <option value="sub">Subtração</option>
+                <option value="divisao">Divisão</option>
+                <option value="multi">Multiplicação</option>
+            </select>
+            <input class="caixa" type="number" id="num2">
+            <input class="botao" type="button" value="resultado" onclick="resultado()">
+            <br><p id="saida"></p>
+        </div>
+    </div>
+
     <script src="index.js"></script>
 
     
