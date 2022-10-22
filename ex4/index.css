@@ -1,0 +1,32 @@
+body{
+    background-color: rgba(8, 8, 8, 0.979);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 9px 9px 13px 0 rgba(23, 173, 111, 0.781);
+    padding: 25px;
+    width: 200px;
+    margin: 50px;
+    background-color: rgb(4, 250, 37);
+    border: 3px solid rgb(245, 238, 238);;
+    border-radius: 2.5rem;
+}
+
+#titulo{
+    color: rgb(0, 119, 10);
+    -webkit-text-stroke: black;
+    -webkit-text-stroke-width: 1px;
+}
+
+.caixa{
+    border-radius: 1.4rem;
+    border-color: rgb(8, 8, 8);
+}
