@@ -9,3 +9,4 @@ Dia 5 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex5_B) Data
 Dia 5 : [questão 3](https://github.com/rickEDU/AlphaED/tree/main/JS/ex5_C) Escolha um Produto e mostre<br>
 Dia 6 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex6_A) Escolha um Carro e mostre<br>
 Dia 6 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex6_B) Máscara de CEP<br>
+Dia 7 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex7_A) Formulário<br>
