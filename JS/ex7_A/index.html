@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <div>
+            <label for="">Nome</label>
+            <input id="nome" type="text" placeholder="Digite seu nome" required="required">
+        </div>
+        <div>
+            <label for="">Data de Nascimento</label>
+            <input id="dataNascimento" type="date" placeholder="Digite seu Data de Nascimento" required="required">
+        </div>
+        <div>
+            <label for="">Peso</label>
+            <input id="peso"type="text" placeholder="Digite seu Peso em Kg" required="required">
+        </div>
+        <div>
+            <label for="">Altura</label>
+            <input id="altura" type="text" placeholder="Digite seu Altura" required="required">
+        </div>
+        <div>
+            <label for="">Genero</label>
+            <select id="gender">
+                <option value="0">-option-</option>
+                <option value="1">Masculino</option>
+                <option value="2">Feminino</option>
+                <option value="3">Outro</option>
+            </select>
+        </div>
+        <div>
+            <input type="button" id="exibir" value="Exibir">
+        </div>
+    </form>
+    
+    <script src="index.js"></script>
+</body>
+</html>

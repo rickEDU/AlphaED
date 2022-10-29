@@ -15,3 +15,4 @@ function mascara (){
         cep.value = cep.value.slice(0,5)+"-"+cep.value.slice(5,8)
     }
 }
+
