@@ -10,6 +10,6 @@ Dia 5 : [questão 3](https://github.com/rickEDU/AlphaED/tree/main/JS/ex5_C) Esco
 Dia 6 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex6_A) Escolha um Carro e mostre<br>
 Dia 6 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex6_B) Máscara de CEP<br>
 Dia 7 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex7_A) Formulário<br>
-Dia 7 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex7_B) Formulário<br>
-Dia 8 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex8_A) Formulário<br>
-Dia 8 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex8_B) Formulário<br>
+Dia 7 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex7_B) Objeto com espaços<br>
+Dia 8 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex8_A) Formulário try...catch<br>
+Dia 8 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex8_B) Conversão de String para objeto<br>
