@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inde.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="card">
+
+            <legend>Nome do Produto</legend>
+            <input type="text" id="nome">
+
+            <legend>Descrição</legend>
+            <textarea name="desc" id="descricao" cols="30" rows="10"></textarea>
+
+            <legend>Valor do Produto</legend>
+            <input type="number" id="valor">
+
+            <div id="apagar"></div>
+            <div id="incluir"></div>
+            
+            <input type="button" id="listaButton" onclick="listarProdutos()" value="Listar Produtos">
+            
+        </div>
+        <div id="listaTable"></div>
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
