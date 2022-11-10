@@ -1,8 +1,7 @@
 // se já existir um produto cadastrado com o nome, impedir o cadastro.
 
 let produtos = []
-
-
+let ID = 0;
 let op = 0;
 
 nome.addEventListener('input', function(){
@@ -60,7 +59,7 @@ function novoProduto(){
         return document.getElementById("saida").innerHTML = `${e}`
     }
 
-    produtoObj.id =  produtos.length
+    produtoObj.id =  ID
     produtoObj.nome = nome
     produtoObj.descricao = descricao
     produtoObj.valor = valor
@@ -74,50 +73,84 @@ function novoProduto(){
     apagaCampo()
     document.getElementById("saida").innerHTML = `Produto ${produtoObj.nome} incluído com sucesso!`
     console.log(produtos)
+    ID++;
 }
 
 function listarProdutos(){
     document.getElementById("saida").innerHTML = ``
+    document.getElementById("listaTable").innerHTML = ``
+    document.getElementById("listaTable").innerHTML = `           
+        <table id="listaTable">
+            <tr>
+                <th id="cabeca">Id</th>
+                <th id="cabeca">Produto</th>
+                <th id="cabeca">Valor</th>
+                <th id="cabeca">Editar</th>
+                <th id="cabeca">Apagar</th>
+            </tr>
+        </table>`;
+    let tableB = document.getElementById("listaTable");
+    let i = 0;
+    while(i<produtos.length){
+        let row = tableB.insertRow()
+        let idCel = row.insertCell()
+        let nomeCel = row.insertCell()
+        let valorCel = row.insertCell()
+        let editCel = row.insertCell()
+        let deleteCel = row.insertCell()
 
-    document.getElementById("listaTable").innerHTML = `
-      <table>
-        <tr>
-          <th id="cabeca">Id</th>
-          <th id="cabeca">Produto</th>
-          <th id="cabeca">Valor</th>
-          <th id="cabeca">Editar</th>
-          <th id="cabeca">Apagar</th>
-        </tr>${bodyTable()}
-      </table>`
+        idCel.innerHTML  = produtos[i].id
+        nomeCel.innerHTML  = `<a onclick="exibirInfo(${produtos[i].id})">${produtos[i].nome}</a>`
+        valorCel.innerHTML  = produtos[i].valor
+        editCel.innerHTML  = `${exibeEditar(produtos[i].id)}`
+        deleteCel.innerHTML  = `${exibeDeletar(produtos[i].id)}`
+        i++;
+    }
   }
 
-function bodyTable(){
-    return produtos.map(f => `
-    <div>
-        <tr>
-            <th>
-            ${f.id}
-            </th>
+// function listarProdutos(){
+//     document.getElementById("saida").innerHTML = ``
 
-            <th>
-            <a onclick="exibirInfo(${f.id})">${f.nome}</a>
-            </th>
+//     document.getElementById("listaTable").innerHTML = `
+//       <table>
+//         <tr>
+//           <th id="cabeca">Id</th>
+//           <th id="cabeca">Produto</th>
+//           <th id="cabeca">Valor</th>
+//           <th id="cabeca">Editar</th>
+//           <th id="cabeca">Apagar</th>
+//         </tr>${bodyTable()}
+//       </table>`
+//   }
 
-            <th>
-            ${f.valor}
-            </th>  
 
-            <th>
-            ${exibeEditar(f.id)}
-            </th>
+// function bodyTable(){
+//     return produtos.map(f => `
+//     <div>
+//         <tr>
+//             <th>
+//             ${f.id}
+//             </th>
 
-            <th>
-            ${exibeDeletar(f.id)}
-            </th>
+//             <th>
+//             <a onclick="exibirInfo(${f.id})">${f.nome}</a>
+//             </th>
 
-        </tr>
-    </div>`).join('')
-}
+//             <th>
+//             ${f.valor}
+//             </th>  
+
+//             <th>
+//             ${exibeEditar(f.id)}
+//             </th>
+
+//             <th>
+//             ${exibeDeletar(f.id)}
+//             </th>
+
+//         </tr>
+//     </div>`).join('')
+// }
 
 
 function exibirInfo(id){
@@ -137,10 +170,20 @@ function exibirInfo(id){
 }
 
 function dataFormatada(data){
-    let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
-    return `${data.slice(8,10)} de ${meses[data.slice(5,7)-1]} de ${data.slice(0,4)}, Produto salvo as: ${data.slice(11,19)}` 
+    //let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+    return `${cortar(data,8,10)}/${cortar(data,5,7)}/${cortar(data,0,4)} - ${cortar(data,11,19)}` 
 }
 
+// Já que não posso usar o slice, eu programo um método que faz a mesma coisa KKKKKK.
+function cortar(data,a,b){
+    let completo= ``;
+    while(a<b){
+        completo = completo+data[a]
+
+        a++;
+    }
+    return completo;
+}
 
 function exibeEditar(id){
    return `<a onclick="editar(${id})">Editar</a>`
