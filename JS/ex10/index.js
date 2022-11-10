@@ -108,6 +108,7 @@ function listarProdutos(){
     }
   }
 
+
 // function listarProdutos(){
 //     document.getElementById("saida").innerHTML = ``
 
@@ -170,6 +171,7 @@ function exibirInfo(id){
 }
 
 function dataFormatada(data){
+    //ia usar esse vetor para mostrar o mês por extenso, mas a questão só quer os números separados por "/"
     //let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
     return `${cortar(data,8,10)}/${cortar(data,5,7)}/${cortar(data,0,4)} - ${cortar(data,11,19)}` 
 }
@@ -186,7 +188,7 @@ function cortar(data,a,b){
 }
 
 function exibeEditar(id){
-   return `<a onclick="editar(${id})">Editar</a>`
+   return `<a onclick="editar(${id})"><img src="editar.png" width="25px"></a>`
 }
 function editar(id){
     let i=0;
@@ -225,7 +227,7 @@ function cancela(){
 }
 
 function exibeDeletar(id){
-    return `<a onclick="deletar(${id})">deletar</a>`
+    return `<a onclick="deletar(${id})"><img src="lixeira.png" width="25px"></a>`
 }
 
 function deletar(id){
