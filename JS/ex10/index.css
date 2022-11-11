@@ -1,24 +1,25 @@
 body{
-    background-image: linear-gradient(to left, rgba(213, 215, 243, 0.973) , rgba(5, 2, 202, 0.973));
+    background-image: linear-gradient(to left, rgb(222, 224, 248) , rgba(97, 97, 100, 0.973));
     color : white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, Helvetica, sans-serif;
 }
 
 .row{
-    padding: 15px;
+    padding: 35px;
+    width: 30%;
     border-radius: 15px;
     position: absolute;
     top: 10%;
     left: 10%;
-    background-color: rgba(11, 7, 70, 0.658);
+    background-color: rgba(56, 56, 56, 0.952);
 }
+
 .row2{
     padding: 15px;
     border-radius: 15px;
     position: absolute;
     top: 10%;
     left: 50%;
-    background-color: rgba(11, 7, 70, 0.658);
 }
 
 .card{
@@ -27,3 +28,69 @@ body{
 
 }
 
+.botao{
+    color: rgba(255, 255, 255, 0.966);
+    border: nome;
+    padding: 8px;
+    width: 75%;
+    background-color: rgb(47, 127, 233);
+    border-radius: 8px;
+}
+.botao:hover{
+    background-color: rgb(24, 60, 107);;
+}
+.botaoSalvar{
+    color: rgba(255, 255, 255, 0.966);
+    border: nome;
+    padding: 8px;
+    width: 50%;
+    background-color: rgb(6, 202, 33);
+    border-radius: 8px;
+}
+.botaoSalvar:hover{
+    background-color: rgb(2, 88, 14);;
+}
+.botaoCancelar{
+    color: rgba(238, 235, 235, 0.966);
+    border: nome;
+    padding: 8px;
+    width: 50%;
+    background-color: rgb(177, 10, 10);
+    border-radius: 8px;
+}
+.botaoCancelar:hover{
+    background-color: rgb(109, 15, 15);;
+}
+.nomeClick{
+    color: rgb(8, 110, 5);
+}
+.nomeClick:hover{
+    color: rgb(22, 224, 15);
+}
+
+#descricao{
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+    border-radius: 8px;
+}
+#nome{
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+    border-radius: 8px;
+}
+#valor{
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+    border-radius: 8px;
+}
+
+table{
+    color: black;
+    border: 1px solid;
+    border-radius: 8px;
+}
+tr{
+    border-bottom: 1px solid rgb(14, 13, 13);
+    border: 1px solid;
+    border-radius: 8px;
+}

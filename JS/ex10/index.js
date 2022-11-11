@@ -1,4 +1,3 @@
-// se já existir um produto cadastrado com o nome, impedir o cadastro.
 
 let produtos = []
 let ID = 0;
@@ -11,7 +10,7 @@ descricao.addEventListener('input', function(){
     teste()
 })
 valor.addEventListener('input', function(){
-    valor.value = valor.value.replace(/[^0-9,]/, "")
+    //valor.value = valor.value.replace(/,/, ".")
     teste()
 })
 
@@ -22,7 +21,7 @@ function teste(){
     let valor = document.getElementById("valor").value
 
     if (nome!="" && descricao!="" && valor!="" && op===0){
-        document.getElementById("incluir").innerHTML = `<input type="button" onclick="novoProduto()" id="incluir" value="Incluir Produto">`
+        document.getElementById("incluir").innerHTML = `<input type="button" class="botaoSalvar" onclick="novoProduto()" id="incluir" value="Incluir Produto">`
     }else if(op===0){
         document.getElementById("incluir").innerHTML = ``
     }
@@ -77,6 +76,11 @@ function novoProduto(){
 }
 
 function listarProdutos(){
+    if (produtos.length<1){
+        document.getElementById("listaTable").innerHTML = ``
+        return     document.getElementById("saida").innerHTML = `<p>Não há produtos cadastrados para mostrar.</p>`
+
+    }
     document.getElementById("saida").innerHTML = ``
     document.getElementById("listaTable").innerHTML = ``
     document.getElementById("listaTable").innerHTML = `           
@@ -100,7 +104,7 @@ function listarProdutos(){
         let deleteCel = row.insertCell()
 
         idCel.innerHTML  = produtos[i].id
-        nomeCel.innerHTML  = `<a onclick="exibirInfo(${produtos[i].id})">${produtos[i].nome}</a>`
+        nomeCel.innerHTML  = `<a onclick="exibirInfo(${produtos[i].id})" class="nomeClick" >${produtos[i].nome}</a>`
         valorCel.innerHTML  = produtos[i].valor
         editCel.innerHTML  = `${exibeEditar(produtos[i].id)}`
         deleteCel.innerHTML  = `${exibeDeletar(produtos[i].id)}`
@@ -108,50 +112,6 @@ function listarProdutos(){
     }
   }
 
-
-// function listarProdutos(){
-//     document.getElementById("saida").innerHTML = ``
-
-//     document.getElementById("listaTable").innerHTML = `
-//       <table>
-//         <tr>
-//           <th id="cabeca">Id</th>
-//           <th id="cabeca">Produto</th>
-//           <th id="cabeca">Valor</th>
-//           <th id="cabeca">Editar</th>
-//           <th id="cabeca">Apagar</th>
-//         </tr>${bodyTable()}
-//       </table>`
-//   }
-
-
-// function bodyTable(){
-//     return produtos.map(f => `
-//     <div>
-//         <tr>
-//             <th>
-//             ${f.id}
-//             </th>
-
-//             <th>
-//             <a onclick="exibirInfo(${f.id})">${f.nome}</a>
-//             </th>
-
-//             <th>
-//             ${f.valor}
-//             </th>  
-
-//             <th>
-//             ${exibeEditar(f.id)}
-//             </th>
-
-//             <th>
-//             ${exibeDeletar(f.id)}
-//             </th>
-
-//         </tr>
-//     </div>`).join('')
-// }
 
 
 function exibirInfo(id){
@@ -198,8 +158,8 @@ function editar(id){
             document.getElementById("nome").value = produtos[i].nome
             document.getElementById("descricao").value = produtos[i].descricao
             document.getElementById("valor").value = produtos[i].valor
-            document.getElementById("incluir").innerHTML = `<input type="button" onclick="salvar(${i})" value="Salvar">`
-            document.getElementById("cancelar").innerHTML = `<input type="button" onclick= "cancela()" value="Cancelar">`
+            document.getElementById("incluir").innerHTML = `<input type="button"  class="botaoSalvar" onclick="salvar(${i})" value="Salvar">`
+            document.getElementById("cancelar").innerHTML = `<input type="button" class="botaoCancelar" onclick= "cancela()" value="Cancelar">`
             
         }
         i++;

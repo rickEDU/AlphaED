@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div id="card">
+            <h1>Calculadora</h1>
+            <input type="text" class="caixa" id="entrada1" placeholder="Insira somente números"><br><br>
+            <input type="text" class="caixa" id="entrada2" placeholder="Insira somente números"><br><br>
+            <input type="button" class="butao" id="soma" onclick="soma(entrada1.value, entrada2.value)" value="Soma">
+            <input type="button" class="butao" id="sub" onclick="subtracao(entrada1.value, entrada2.value)" value="Subtração">
+            <input type="button" class="butao" id="mult" onclick="multiplicacao(entrada1.value, entrada2.value)" value="Multiplição">
+            <input type="button" class="butao" id="divisao" onclick="divisao(entrada1.value, entrada2.value)" value="Divisão">
+            <input type="button" class="butao" id="potencia" onclick="potencia(entrada1.value, entrada2.value)" value="Potenciação">
+            <br><br><div id="saida"></div>
+        </div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

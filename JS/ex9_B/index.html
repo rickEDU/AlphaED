@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="row">
+        <div id="card">
+            <h1>Insira sua data de Nascimento,</h1>
+            <h2>E saiba quantos dias faltam para morrer.</h2>
+            <input type="text" id="dia" class="caixa" maxlength="2" placeholder="Dia"><br>
+            <input type="text" id="mes" class="caixa" maxlength="2" placeholder="Mês"><br>
+            <input type="text" id="ano" class="caixa" maxlength="4" placeholder="Ano"><br><br>
+            <select id="genero">
+                <option value="0">-option-</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+            <input type="button" class="botao" value="Verificar" id="verificar">  
+            <div id="saida"></div>  
+        </div>
+    </div>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
