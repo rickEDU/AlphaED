@@ -31,7 +31,7 @@ function restoDoY(data){
     ano = ano%4
     let mesesRestantes = 12-data.getMonth()
     let diasRestantes = (mesesRestantes*30)-data.getDate()
-    if (ano===0){
+    if (ano===0 && (data.getMonth())<2){
         diasRestantes += 1;
     }
     if (mesesRestantes===12){
