@@ -13,4 +13,6 @@ Dia 7 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex7_A) Form
 Dia 7 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex7_B) Objeto com espaços<br>
 Dia 8 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex8_A) Formulário try...catch<br>
 Dia 8 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex8_B) Conversão de String para objeto<br>
+Dia 9 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex9_A) Calculadora<br>
+Dia 9 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex9_B) Calculadora da Morte<br>
 Dia 10 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex10) Array com objeto<br>
