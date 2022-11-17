@@ -16,3 +16,4 @@ Dia 8 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex8_B) Conv
 Dia 9 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex9_A) Calculadora<br>
 Dia 9 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex9_B) Calculadora da Morte<br>
 Dia 10 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex10) Array com objeto<br>
+Dia 11 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex11) Array com objeto, Filtro, Search, Ordena (crescente e decrescente<br>
