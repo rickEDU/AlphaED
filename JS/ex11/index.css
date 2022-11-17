@@ -1,0 +1,106 @@
+body{
+    background-image: linear-gradient(to left, rgb(222, 224, 248) , rgba(97, 97, 100, 0.973));
+    color : white;
+    font-family: 'Times New Roman', Times, Helvetica, sans-serif;
+}
+
+.row{
+    padding: 35px;
+    width: 30%;
+    border-radius: 15px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background-color: rgba(147, 144, 144, 0.952);
+}
+
+.row2{
+    padding: 15px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
+
+.card{
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.botao{
+    color: rgba(255, 255, 255, 0.966);
+    border: nome;
+    padding: 8px;
+    width: 75%;
+    border-radius: 8px;
+    background-color: rgb(24, 60, 107);
+}
+.botao:hover{
+    background-color: rgb(47, 127, 233);
+
+}
+.botaoSalvar{
+    color: rgba(255, 255, 255, 0.966);
+    border: nome;
+    padding: 8px;
+    width: 50%;
+    border-radius: 8px;
+    background-color: rgb(2, 88, 14);
+}
+.botaoSalvar:hover{
+    background-color: rgb(6, 202, 33);
+
+}
+.botaoCancelar{
+    color: rgba(238, 235, 235, 0.966);
+    border: nome;
+    padding: 8px;
+    width: 50%;
+    border-radius: 8px;
+    background-color: rgb(109, 15, 15);
+
+}
+.botaoCancelar:hover{
+    background-color: rgb(177, 10, 10);
+
+}
+.nomeClick{
+    color: rgb(8, 110, 5);
+}
+.nomeClick:hover{
+    color: rgb(22, 224, 15);
+
+
+}
+
+.headClick{
+    color: rgb(102, 124, 11);
+}
+.headClick:hover{
+    color: rgb(183, 219, 41);;
+}
+.campo{
+    width: 100%;
+    background-color: rgb(223, 223, 223);
+    border-radius: 8px;
+}
+
+#buscar{
+    width: 50%;
+    background-color: rgb(223, 223, 223);
+    border-radius: 8px;
+}
+
+
+
+table{
+    color: black;
+    border: 1px solid;
+    border-radius: 8px;
+}
+tr{
+    border-bottom: 1px solid rgb(14, 13, 13);
+    border: 1px solid;
+    border-radius: 8px;
+}
