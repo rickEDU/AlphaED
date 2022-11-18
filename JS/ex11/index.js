@@ -1,7 +1,9 @@
 
 let produtos = []
-let ID = 0;
+let auxiliar = []
 //op, n, v são variáveis de controle de funções para exibição ou ordenamento.
+
+let ID = 0;
 let op = 0;
 let n = 1;
 let v = 1;
@@ -22,9 +24,7 @@ valor.addEventListener('input', function(){
     }else if (input===2){
         valor.value = valor.value.slice(2)
     }
-    // else if(input>2 && valor.length>3){
-    //     valor.value= valor.value.replace(/,/, "")
-    // }
+    
     valor.value =  valor.value.replace(/[^0-9]/, "")
     
     valor.value = mascaraValor(valor.value)
@@ -32,7 +32,6 @@ valor.addEventListener('input', function(){
 })
 
 function mascaraValor(valor){
-    console.log("valor do input:",input)
     valor.replace(/,/,"")
     let aux = "0,00"
     if(input==0 && valor===/[^0-9]/){
@@ -52,7 +51,7 @@ function mascaraValor(valor){
         input=2;
         return aux =  "0,"+valor.slice(-2)
     }else if(input>2){
-        aux2 = (valor.length)-2
+        let aux2 = (valor.length)-2
         return aux = valor.slice(0,aux2)+","+valor.slice(-2)
     }
     
@@ -131,8 +130,8 @@ function listarProdutos(){
         <table id="listaTable">
             <tr>
                 <th id="cabeca">Id</th>
-                <th id="cabeca" class="headClick" onclick="sortNome(n)">Produto</th>
-                <th id="cabeca" class="headClick" onclick="sortValor(v)">Valor</th>
+                <th id="cabeca" class="headClick" onclick="sortNome(n,0)">Produto</th>
+                <th id="cabeca" class="headClick" onclick="sortValor(v,0)">Valor</th>
                 <th id="cabeca">Editar</th>
                 <th id="cabeca">Apagar</th>
             </tr>
@@ -252,50 +251,87 @@ function apagaCampo(){
 
 // variável n foi declarada lá no topo do código, é uma variável global, o mesmo vale para as outras variáveis usadas nas funções de ordenação.
 // a variável n me diz se a tabela está ordenada de forma crescente ou decrescente.
-function sortNome(n){
-    if (n===1){
-        ordenaName()
-    }else if(n==0){
-        inverteNome()
+function sortNome(n,auxOP){
+    if(auxOP===0){
+        if (n===1){
+            ordenaName(produtos, auxOP)
+        }else if(n===0){
+            inverteNome(produtos, auxOP)
+        }   
+    }else if(auxOP===1){
+        if (n===1){
+            ordenaName(auxiliar, auxOP)
+        }else if(n===0){
+            inverteNome(auxiliar, auxOP)
+        }
     }
 }
 
-function ordenaName(){
-    const x = produtos.sort((a,b)=>{
+function ordenaName(vetor, auxOP){
+    const x = vetor.sort((a,b)=>{
         return a.nome.localeCompare(b.nome);
     })
-    listarProdutos()
+    if(auxOP===0){
+        listarProdutos()
+    }else{
+        listarSearch(vetor)
+    }
     n=0;
 }
-function inverteNome(){
-    const x = produtos.sort((a,b)=>{
+
+function inverteNome(vetor, auxOP){
+    const x = vetor.sort((a,b)=>{
         return b.nome.localeCompare(a.nome);
     })
-    listarProdutos()
+    if(auxOP===0){
+        listarProdutos()
+    }else{
+        listarSearch(vetor)
+    }
+ 
     n=1;
 }
 
-// a variável v tem a mesma função da n, ela me da o estado da tabela e ordena de forma crescente ou decrescente.
-function sortValor(v){
-    if (v===1){
-        ordenaValor()
-    }else if(v==0){
-        inverteValor()
+
+function sortValor(v,auxOP){
+    if (auxOP===0){    
+        if (v===1){
+            ordenaValor(produtos, auxOP)
+        }else if(v==0){
+            inverteValor(produtos, auxOP)
+        }
+    }else if(auxOP===1){
+        if (v===1){
+            ordenaValor(auxiliar, auxOP)
+        }else if(v==0){
+            inverteValor(auxiliar, auxOP)
+        }
     }
+
 }
 
-function ordenaValor(){
-    const x = produtos.sort((a,b)=>{
+function ordenaValor(vetor, auxOP){
+    const x = vetor.sort((a,b)=>{
         return a.valor - b.valor;
     })
-    listarProdutos()
+    if(auxOP===0){
+        listarProdutos()
+    }else{
+        listarSearch(vetor)
+    }
     v=0;
 }
-function inverteValor(){
-    const x = produtos.sort((a,b)=>{
+
+function inverteValor(vetor, auxOP){
+    const x = vetor.sort((a,b)=>{
         return b.valor - a.valor;
     })
-    listarProdutos()
+    if(auxOP===0){
+        listarProdutos()
+    }else{
+        listarSearch(vetor)
+    }
+    
     v=1;
 }
 
@@ -305,7 +341,6 @@ function searchProduto(){
     if(valor.length<1){
         return listarProdutos();
     }
-    var auxiliar = []
     valor=valor.toLowerCase();
     auxiliar=produtos.filter((b)=>b.nome.toLowerCase().includes(valor));
     auxiliar=auxiliar.concat(produtos.filter((b)=>b.descricao.toLowerCase().includes(valor)));
@@ -317,7 +352,6 @@ function searchProduto(){
         document.getElementById("saida").innerHTML = `Foram encontrado(s) ${auxiliar.length}`
         listarSearch(auxiliar)
     }
-
 }
 
 
@@ -332,8 +366,8 @@ function listarSearch(vetor){
         <table id="listaTable">
             <tr>
                 <th id="cabeca">Id</th>
-                <th id="cabeca" class="headClick" onclick="sortNome(n)">Produto</th>
-                <th id="cabeca" class="headClick" onclick="sortValor(v)">Valor</th>
+                <th id="cabeca" class="headClick" onclick="sortNome(n,1)">Produto</th>
+                <th id="cabeca" class="headClick" onclick="sortValor(v,1)">Valor</th>
                 <th id="cabeca">Editar</th>
                 <th id="cabeca">Apagar</th>
             </tr>
