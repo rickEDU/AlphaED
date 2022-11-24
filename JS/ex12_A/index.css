@@ -1,0 +1,34 @@
+body{
+    background-image: linear-gradient(to left, rgb(228, 248, 222) , rgba(129, 216, 94, 0.973));
+    color : black;
+    font-family: 'Times New Roman', Times, Helvetica, sans-serif;
+}
+
+
+
+.row{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    padding: 35px;
+    width: 50%;
+    border-radius: 15px;
+    position: absolute;
+    background-color: rgba(105, 216, 41, 0.952);
+}
+
+
+#entrada{
+    border-radius: 7px;
+}
+
+#testePrimo{
+    border-radius: 7px;
+    color: green;
+}
+#testePrimo:hover{
+    background-color: rgb(9, 149, 9);
+    color: black;
+}
