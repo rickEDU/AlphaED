@@ -19,4 +19,4 @@ Dia 10 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex10) Array 
 Dia 11 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex11) Array com objeto, Filtro, Search, Ordena (crescente e decrescente<br>
 Dia 12 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex12_A) Números primos entre 0 e 100.000<br>
 Dia 12 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex12_B) Pocker simplificado<br>
-Dia 13 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex11) Jogo da velha<br>
+Dia 13 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex13) Jogo da velha<br>
