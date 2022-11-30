@@ -1,4 +1,4 @@
-import EventCustom from "./eventoCustom.js";
+import EventCustom from "../event/eventoCustom.js";
 
 export default function Home(){
 
@@ -10,6 +10,7 @@ export default function Home(){
 
     const doces  = document.createElement('button')
     doces.textContent = "DOCES "
+    doces.classList.add('botao')
     doces.addEventListener('click', ()=>{
         const event = EventCustom('/doces')
         main.dispatchEvent(event)   
@@ -17,7 +18,8 @@ export default function Home(){
   
 
     const brigadeiros  = document.createElement('button')
-    brigadeiros.textContent = "Brigadeiros"
+    brigadeiros.textContent = "BRIGADEIRO"
+    brigadeiros.classList.add('botao')
     brigadeiros.addEventListener('click', ()=>{
         const event = EventCustom('/brigadeiros')
         main.dispatchEvent(event)    
@@ -25,7 +27,8 @@ export default function Home(){
 
 
     const cupcakes  = document.createElement('button')
-    cupcakes.textContent = "Cupcakes"
+    cupcakes.textContent = "CUPCAKE"
+    cupcakes.classList.add('botao')
     cupcakes.addEventListener('click', ()=>{
         const event = EventCustom('/cupcakes')
         main.dispatchEvent(event)   

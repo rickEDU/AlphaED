@@ -1,4 +1,4 @@
-import EventCustom from "./eventoCustom.js";
+import EventCustom from "../event/eventoCustom.js";
 
 export default function Doces(){
     const main = document.getElementById('root')
@@ -8,6 +8,7 @@ export default function Doces(){
     H1.textContent = "DOCES"
     const home  = document.createElement('button')
     home.textContent = "Home"
+    home.classList.add('botao')
     home.addEventListener('click', ()=>{
         const event = EventCustom('/')
         main.dispatchEvent(event)  
