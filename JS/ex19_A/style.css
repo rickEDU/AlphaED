@@ -1,0 +1,32 @@
+body{
+    justify-content: center;
+    background-image: linear-gradient(to left, rgb(0, 0, 0) , rgb(1, 246, 1));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.row{
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 35px;
+    width: 60%;
+    border-radius: 15px;
+    position: absolute;
+    color: rgb(1, 246, 1);
+    border: 3px solid rgb(1, 246, 1);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#compra{
+    width: 175px;
+    height: 35px;
+    text-align: center;
+    background-color: rgb(1, 246, 1);
+    font-weight: bold;
+    border-radius: 7px;
+}
+#compra:hover{
+    background-color: rgb(4, 196, 4);
+}

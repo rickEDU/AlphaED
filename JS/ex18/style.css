@@ -1,0 +1,31 @@
+body{
+    justify-content: center;
+    background-image: linear-gradient(to left, rgb(0, 0, 0) , rgb(1, 246, 1));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.row{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -25%);
+    text-align: center;
+    padding: 35px;
+    width: 425px;
+    border-radius: 15px;
+    position: absolute;
+    color: rgb(1, 246, 1);
+    border: 3px solid rgb(1, 246, 1);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.select{
+    width: 300px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(1, 246, 1);
+    background-color: rgb(1, 246, 1);
+    border-radius: 8px;
+}

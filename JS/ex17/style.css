@@ -1,0 +1,56 @@
+body{
+    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.row{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-115%, -50%);
+    padding: 35px;
+    width: 425px;
+    border-radius: 15px;
+    position: absolute;
+    border: 3px solid black;
+    background-color: white;
+    font-weight: bold;
+}
+
+
+
+
+.botao{
+    width: 100px;
+    height: 45px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.botao:hover{
+    background-color: black;
+    color: white;
+}
+
+.input{
+    width: 100px;
+    height: 25px;
+    border-radius: 7px;
+    border: 3px solid black;
+}
+
+.frame{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-30%, -50%);
+    padding: 35px;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    border-radius: 15px;
+    position: absolute;
+    border: none;
+}
+
