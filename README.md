@@ -21,5 +21,10 @@ Dia 12 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex12_A) N�
 Dia 12 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex12_B) Pocker simplificado<br>
 Dia 13 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex13) Jogo da velha<br>
 Dia 14 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex14) SPA, rotas<br>
-Dia 15 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex15_A) Bomba contagem até 10<br>
-Dia 15 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex15_B) Bomba contagem regressiva de 1 minuto<br>
+Dia 15 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex15_A) Bomba contagem até 10<br>
+Dia 15 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex15_B) Bomba contagem regressiva de 1 minuto<br>
+Dia 16 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex16) Cotação das moedas, API.<br>
+Dia 17 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex17) CEP usando API.<br>
+Dia 18 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex18) Previsão do tempo API.<br>
+Dia 19 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex19_A) Compra de cartas na mão, API.<br>
+Dia 19 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex19_B) Compra de cartas na mão, Promise.all(), API.<br>
