@@ -1,0 +1,125 @@
+body{
+    background-color: black;
+    display: inline-block;
+
+}
+
+
+.row{
+
+    word-wrap: break-word;
+    height: 250px;
+    width: 400px;
+    display: inline;
+    text-align: center;
+    padding: 5vw 0vw 5vw 0vw;
+    color: rgb(1, 246, 1);
+    border: 3px solid rgb(1, 246, 1);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 15px;
+    justify-content: space-between;
+    float: right;
+
+}
+.row1{
+
+    width: 38%;
+    display: inline-block;
+    text-align: center;
+    padding: 5vw 0vw 5vw 0vw;
+    min-width:40vw;
+    color: rgb(1, 246, 1);
+    border: 3px solid rgb(1, 246, 1);
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+
+.game{
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    text-align: center;
+    transform: translate(-50%, -0%);
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.cartela{
+
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 7px;
+    justify-content: space-between;
+    border: 3px solid white;
+
+}
+.cell{
+    color: rgb(20, 69, 20);
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 50%;
+    background-color: white;
+    justify-content: center;
+}
+
+
+.marcado{
+    text-align: center;
+    display: inline-block;
+    color: black;
+    height: 35px;
+    width: 35px;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 50%;
+    background-color: rgb(220, 9, 9);
+}
+.cell:hover{
+    background-color: green;
+    color: white;
+}
+.numerosCartela{
+    text-align: center;
+}
+#saidaSorteio{
+    display: inline;
+    text-align: center;
+    max-width: 40vw;
+    width: 80%;
+}
+
+
+#saidaSorteio{
+    top: 10%;
+    left: 50%;
+    margin-right: -50%;
+    text-align: center;
+    transform: translate(-50%, -0%);
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+}
+.bolinha{
+    width: 20px;
+    height: 20px;
+    display: inline;
+    background-color: white;
+    color: black;
+    border: 1px solid red; 
+    border-radius: 50%; 
+}
+
+#partida{
+
+    position: relative;
+}
