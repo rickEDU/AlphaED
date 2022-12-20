@@ -28,3 +28,7 @@ Dia 17 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex17) CEP us
 Dia 18 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex18) Previsão do tempo API.<br>
 Dia 19 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex19_A) Compra de cartas na mão, API.<br>
 Dia 19 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex19_B) Compra de cartas na mão, Promise.all(), API.<br>
+Dia 20 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex20) Jogo bingo.<br>
+Dia 21 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex21) Class Avatar.<br>
+Dia 22 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex22_A) Class Avatar com mais coisas.<br>
+Dia 22 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex22_B) Class mago e cowboy, Herança.<br>
