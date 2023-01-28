@@ -10,8 +10,6 @@ function imprimirProd(){
     let operador = document.querySelector("#op").value
     operador = parseInt(operador)
     switch (operador){
-        default: 
-            document.getElementById("saida").innerHTML = `<p></p>`
         case 1: 
             document.getElementById("saida").innerHTML = `<img src="${vetor[operador-1]}"  width="150px"/>`
         case 2: 
@@ -22,6 +20,8 @@ function imprimirProd(){
             document.getElementById("saida").innerHTML = `<img src="${vetor[operador-1]}"  width="150px"/>`
         case 5: 
             document.getElementById("saida").innerHTML = `<img src="${vetor[operador-1]}"  width="150px"/>`
+        default: 
+            document.getElementById("saida").innerHTML = `<p></p>`
     }
 }
 

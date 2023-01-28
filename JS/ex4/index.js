@@ -1,9 +1,9 @@
 function calcula_IMC(){
     let peso = document.querySelector("#valorPeso").value
     let altura = document.querySelector("#valorAltura").value
-    peso= parseFloat(peso)
-    altura= parseFloat(altura)
-    imc=peso/altura**2
+    peso = parseFloat(peso)
+    altura = parseFloat(altura)
+    let imc = peso/altura**2
     if (isNaN(peso) || isNaN(altura)){
         document.getElementById("saida").innerHTML = `<strong>ERRO, informe somente números</strong>`
     }else if (imc>40){
