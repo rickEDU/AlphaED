@@ -1,13 +1,19 @@
 # Instalando o Apache
 
 #### 1. Atualizar o gerenciador de arquivos:
-``` sudo apt update ```
+```
+sudo apt update
+ ```
 #### 2. Instalando o Apache2 através do apt:
-``` sudo apt install apache2 ```
+```
+sudo apt install apache2
+ ```
 #### 3 Ajustando o firewall:
 ###### Durante a instalação pelo apt o apache se registra no UFW (firewall), comando para vê se está registrado:
-``` sudo ufw app list```
-```sudo ufw allow "Apache Full" ```
+```
+sudo ufw app list
+sudo ufw allow "Apache Full"
+ ```
 ###### a saída deverá ser:
 ```
 Output
@@ -18,9 +24,13 @@ Available applications:
   OpenSSH
  ```
 ##### 3.1 É recomendável habilitar o perfil mais restritivo:
-``` sudo ufw allow apache ```
+```
+sudo ufw allow apache
+ ```
 ###### para verificar:
-``` sudo ufw status ```
+```
+sudo ufw status
+ ```
 ###### a saída deverá ser:
 ```
 Output
@@ -37,30 +47,49 @@ Apache (v6)                ALLOW       Anywhere (v6)
 ###### OBS: Observar as permissões referentes ao Apache.
 
 #### 4. Verificar se o apache está rodando:
-``` sudo systemctl status apache2 ```
+```sudo systemctl status apache2
+ ```
 ##### 4.1 Comandos para o apache:
 ###### Parar:
-``` sudo systemctl stop apache2 ```
+```
+sudo systemctl stop apache2
+ ```
 ###### Iniciar:
-``` sudo systemctl start apache2 ```
+```
+sudo systemctl start apache2
+ ```
 ###### Reiniciar:
-``` sudo systemctl restart apache2 ```
+```
+sudo systemctl restart apache2
+ ```
 ###### Desativar:
-``` sudo systemctl disable apache2 ```
+```
+sudo systemctl disable apache2
+ ```
 ###### Ativar:
-``` sudo systemctl enable apache2 ```
+```
+sudo systemctl enable apache2
+ ```
 
 #### 5. Configurando Hosts Virtuais:
 ##### 5.1 Criando o diretório do seu domínio:
-``` sudo mkdir /var/www/your_domain ```
+```
+sudo mkdir /var/www/your_domain
+ ```
 ##### 5.2 Atribua a propriedade a variável de ambiente $USER :
-``` sudo chown -R $USER:$USER /var/www/your_domain ```
+```
+sudo chown -R $USER:$USER /var/www/your_domain
+ ```
 ##### 5.3 Configurando as permissões do seu web root:
-``` sudo chmod -R 755 /var/www/your_domain ```
+```
+sudo chmod -R 755 /var/www/your_domain
+ ```
 ###### OBS: dentro do diretório **/var/www/your_domain** é onde ficará o arquivo html que será exibido se acessarmos o http://"ip da VM/máquina remota"
 
 #### 6. Criando um virtual host para seu novo domínio:
-``` sudo nano /etc/apache2/sites-available/your_domain.conf ```
+```
+sudo nano /etc/apache2/sites-available/your_domain.conf
+ ```
 #### 7. Configure o arquivo de configuração de seu domínio para a porta 80, adcionando as linhas abaixo nele:
 ```
 <VirtualHost *:80>
@@ -73,24 +102,36 @@ Apache (v6)                ALLOW       Anywhere (v6)
 </VirtualHost>
  ```
 #### 8. Habilite o arquivo "your_domain.conf" usando o a2ensite :
-``` sudo a2ensite your_domain.conf ```
+```
+sudo a2ensite your_domain.conf
+ ```
 ##### 8.1 Desabilite o site padrão definido pelo apache:
-``` sudo a2dissite 000-default.conf ```
+```
+sudo a2dissite 000-default.conf
+ ```
 #### 9. Teste a procura de erros na configuração que acabos de criar e editar:
-``` sudo apache2ctl configtest ```
+```
+sudo apache2ctl configtest
+ ```
 ##### 9.1 O resultado deve ser:
 ```
 Output
 Syntax OK 
  ```
 #### 10. Reinicar o apache2:
-``` sudo systemctl restart apache2 ```
+```
+sudo systemctl restart apache2
+ ```
 
 # Habilitando o modo SSL (https):
 #### 1. habilite o mod_ssl com o comando :
-```sudo a2enmod ssl```
+```
+sudo a2enmod ssl
+ ```
 #### 2. Criando o certificado SSL :
-```sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt```
+```
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+ ```
 ##### Irá aparece campos para serem preenchidos como mostrado abaixo:
 ```
 Country Name (2 letter code) [XX]:US
@@ -132,7 +173,9 @@ Email Address []:webmaster@example.com
 127.0.0.1 your_domain.com 
  ```
 #### 5. Reiniciar o apache2
-``` sudo systemctl restart apache2```
+```
+sudo systemctl restart apache2
+```
 ### OBS: Para permitir outro diretório além do /var/www/:
 #### Para permitir que o apache use outro diretório como root, devemos acrescentar ao arquivo de configuração do apache "/etc/apache2/apache2.config" uma tag de Diretório como mostrado abaixo:
 ```
@@ -152,7 +195,7 @@ sudo apt-get autoremove
 whereis apache2
 sudo rm -rf /etc/apache2
  ```
- 
+
 ### Como verificar se ainda há algum processo usando a porta 80:
 ```sudo lsof -i :80 ```
 #### Para matar o processo usar o PID dele:
