@@ -12,6 +12,8 @@ sudo apt install apache2
 ###### Durante a instalação pelo apt o apache se registra no UFW (firewall), comando para vê se está registrado:
 ```
 sudo ufw app list
+ ```
+```
 sudo ufw allow "Apache Full"
  ```
 ###### a saída deverá ser:
@@ -175,7 +177,7 @@ Email Address []:webmaster@example.com
 #### 5. Reiniciar o apache2
 ```
 sudo systemctl restart apache2
-```
+ ```
 ### OBS: Para permitir outro diretório além do /var/www/:
 #### Para permitir que o apache use outro diretório como root, devemos acrescentar ao arquivo de configuração do apache "/etc/apache2/apache2.config" uma tag de Diretório como mostrado abaixo:
 ```
@@ -189,10 +191,23 @@ sudo systemctl restart apache2
 # Como desinstalar o apache do linux:
 ```
 sudo service apache2 stop
-sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
+ ```
+```
+sudo apt-get purge apache2 apache2-utils apache2.2-bin
+ ```
+```
+apache2-common
+ ```
+```
 sudo apt remove apache2.*
-sudo apt-get autoremove
+ ```
+```
+ sudo apt-get autoremove
+ ```
+```
 whereis apache2
+ ```
+```
 sudo rm -rf /etc/apache2
  ```
 
