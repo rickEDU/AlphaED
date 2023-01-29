@@ -35,7 +35,7 @@
 
  * **Servidores**
    * Tutoriais de instalação:
-[FTP-SFTP](https://github.com/rickEDU/AlphaED/blob/main/Servidores/ftp-sftp.md)
-[Apache2](https://github.com/rickEDU/AlphaED/blob/main/Servidores/apache.md)
-[Nginx](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nginx.md)
-[node.js](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nodejs.md)
+     * [FTP-SFTP](https://github.com/rickEDU/AlphaED/blob/main/Servidores/ftp-sftp.md)
+     * [Apache2](https://github.com/rickEDU/AlphaED/blob/main/Servidores/apache.md)
+     * [Nginx](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nginx.md)
+     * [node.js](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nodejs.md)
