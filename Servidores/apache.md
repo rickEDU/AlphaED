@@ -212,6 +212,10 @@ sudo rm -rf /etc/apache2
  ```
 
 ### Como verificar se ainda há algum processo usando a porta 80:
-```sudo lsof -i :80 ```
+```
+sudo lsof -i :80
+ ```
 #### Para matar o processo usar o PID dele:
-```kill -9 "número do PID"``
+```
+kill -9 "número do PID"
+ ```
