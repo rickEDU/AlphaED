@@ -210,7 +210,15 @@ whereis apache2
 ```
 sudo rm -rf /etc/apache2
  ```
-
+## Lembre de verificar o firewall:
+```
+sudo ufw status
+ ```
+#### caso a porta não esteja entre as excessões:
+###### Para permitir:
+```
+sudo ufw allow "numero da porta"
+ ```
 ### Como verificar se ainda há algum processo usando a porta 80:
 ```
 sudo lsof -i :80

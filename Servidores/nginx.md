@@ -100,6 +100,7 @@ Campos que devemos alterar:
             root   /home/usuario_apache/ftp/files;
             index  index.html index.htm;
         }
+    }
 ...
  ``` 
 ###### OBS: o campo **listen** se refere a porta para o servidor, por padrão o nginx usa a 80, **server_name** ip ou domínio, o **return** se refere ao ip da máquina virtual, **root** é **caminho (path)** ao diretório do html que será exibido quando digitarmos o ip no navegador, **pode ser alterado**.
@@ -127,6 +128,16 @@ Campos que devemos alterar:
 }
  ```
 ###### OBS:  O **root** do bloco location é onde caminho até o diretório do html que será exibido quando acontecer uma solicitação via https.
+
+## Lembre de verificar o firewall:
+```
+sudo ufw status
+ ```
+#### caso a porta não esteja entre as excessões:
+###### Para permitir:
+```
+sudo ufw allow "numero da porta"
+ ```
 
 # Como desinstalar o nginx:
 ##### Verificando a versão do Nginx

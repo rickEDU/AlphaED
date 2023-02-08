@@ -38,6 +38,16 @@ sudo ln -s /usr/local/lib/nodejs/node-node-vXX.XX.XX-linux-x64/bin/npx /usr/bin/
 ```
 node -v
  ```
+
+## Lembre de verificar o firewall:
+```
+sudo ufw status
+ ```
+#### caso a porta não esteja entre as excessões:
+###### Para permitir:
+```
+sudo ufw allow "numero da porta"
+ ```
 # Exemplo de uma app.js:
 ```
 const http = require("http");
