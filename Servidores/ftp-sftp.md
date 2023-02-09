@@ -8,7 +8,8 @@ sudo apt-get update
 sudo apt-get install vsftpd
  ```
 #### 3. Depois de instalado criar uma cópia da configuração:
-```sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.original
+```
+sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.original
  ```
 #### 4. Verificando o firewall:
 ```
