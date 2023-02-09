@@ -1,0 +1,1116 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Servidores</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="61d9fb04-1076-4f33-aaf1-ed728a0e00a0" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://lh5.googleusercontent.com/zQJsaIC5RaWtlGd-Org3EO2OxKjr1gt1RH4xbPAIZK7Zs5U3DRriNLDVn4v2nEyFQ3FNiNZpsCMwiiedekUwByKm2FBh8-7O6uEVLq_XeqLLttuBk2sCz9rOe8NnMMytMkqDI2sw"/></div><h1 class="page-title">Servidores</h1></header><div class="page-body"><ul id="3da228e0-c563-4dda-9dc5-9a6b4e0c8e62" class="toggle"><li><details open=""><summary><strong>Ligar máquina virtual pelo terminal</strong></summary><ul id="dbc7f500-9ca7-4928-a524-9ecdff418c6c" class="toggle"><li><details open=""><summary>Configurações no Windows na variável path</summary><figure id="af70e919-b82b-4694-8eac-e8a0218cf515" class="image"><a href="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled.png"><img style="width:624px" src="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled.png"/></a></figure><figure id="980a0b56-b7e2-469e-b07a-eabc0b77dfcc" class="image"><a href="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled%201.png"><img style="width:1365px" src="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled%201.png"/></a></figure></details></li></ul><pre id="b0d28803-419f-4361-83db-ae755b3bbb32" class="code"><code>#Antes tem que realizar uma configuração no Windows
+#Ver minhas máquinas virtuais instaladas
+VBoxManage list vms
+#Ver minhas máquinas que estão em funcionamento
+VBoxManage list runningvms
+#Iniciar máquina virtual no modo headless
+VBoxManage startvm &quot;nome-da-máquina&quot; --type headless</code></pre></details></li></ul><ul id="8c9e295e-9779-479d-86ba-dbd4695f1f2f" class="toggle"><li><details open=""><summary><strong>Deixar o IP constante da Máquina Virtual</strong></summary><ul id="47dff5cc-afd6-4e5e-b33f-ff6b40c0a6f5" class="toggle"><li><details open=""><summary>Referências</summary><p id="126d9323-4ca4-4365-88c8-649417286ef8" class=""><a href="https://datmt.com/linux/how-to-set-static-ip-to-virtualbox-vm/">https://datmt.com/linux/how-to-set-static-ip-to-virtualbox-vm/</a></p></details></li></ul></details></li></ul><ul id="2328c130-cfa6-4b9d-b4c5-1643aed91938" class="toggle"><li><details open=""><summary><strong>Desinstalar o Apache</strong></summary><ul id="6ed6a7a4-d9cc-404b-b31c-de5399caa357" class="toggle"><li><details open=""><summary>Referência</summary><p id="bd747f04-71da-4f7b-ad5c-68a62af53f43" class=""><a href="https://wildarte.com.br/como-desinstalar-completamente-o-lamp-do-linux-ubuntu/">https://wildarte.com.br/como-desinstalar-completamente-o-lamp-do-linux-ubuntu/</a></p><p id="95e7c286-cae8-4d12-ac04-df1e9497d3c0" class=""><a href="https://howtoinstall.co/pt/apache2?action=remove">https://howtoinstall.co/pt/apache2?action=remove</a></p></details></li></ul><pre id="17260c56-a194-4c6f-a9d9-e6813873f665" class="code"><code>sudo service apache2 stop
+sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
+sudo apt-get remove apache2
+sudo apt-get autoremove apache2
+sudo apt-get purge apache2
+sudo apt-get autoremove --purge apache2</code></pre></details></li></ul><ul id="4f2eda80-51d7-4b84-941e-f29f0d2c0350" class="toggle"><li><details open=""><summary><strong>Configuração inicial do Apache</strong></summary><p id="68d9d94e-ce01-403d-aee4-fca3e12d7bfc" class=""><a href="https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-pt">https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-pt</a></p><p id="ff731003-b42b-4d39-b267-95667f95ef73" class=""><a href="https://www.fredericomarinho.com/como-configurar-apache-virtual-hosts-no-ubuntu-20-04/">Fazer passo 6 deste tutorial</a></p><ul id="8f391006-6ed9-4298-9571-cee8d51bdf7f" class="toggle"><li><details open=""><summary>Mudar apenas o virtual host</summary><pre id="9c059063-503b-4fb0-8781-e6ab25f7b3bc" class="code"><code>sudo nano /etc/apache2/sites-available/your_domain.conf</code></pre></details></li></ul></details></li></ul><ul id="1a5527b9-7417-4eea-953d-d130ff60f93d" class="toggle"><li><details open=""><summary><strong>Gerenciamento de Arquivos para conexão via FTP com Apache</strong></summary><ul id="1e485a17-6cea-4f4f-b6d7-50f550a77cd8" class="toggle"><li><details open=""><summary>Criação de FTP</summary><p id="fca1a6b8-e5d5-4904-b8ef-9cdeeda1d12e" class=""><a href="https://www.hostinger.com.br/tutoriais/como-configurar-servidor-ftp-no-vps-ubuntu">Melhor tutorial para configurar o FTP no servidor</a></p><pre id="5abf331c-0bc6-496c-860a-5569879f55d9" class="code"><code>#Atualizar os pacotes do Linux
+sudo apt-get update
+
+#Instalação do VSFTPD
+sudo apt-get install vsftpd
+
+#Backup dos arquivos originais do vsftpd
+sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.original
+
+#Permissões do firewall, lembrando de deixar ativado o firewall
+sudo ufw allow 20/tcp
+sudo ufw allow 21/tcp
+sudo ufw allow 22/tcp
+sudo ufw allow 990/tcp
+sudo ufw allow 40000:50000/tcp
+
+#Verificação das portas do firewall
+sudo ufw status
+
+#Adição do usuário Alex (exemplo) ao FTP
+sudo adduser alex
+
+#Criação de pasta como nome ftp para o usuário Alex (exemplo)
+sudo mkdir /home/alex/ftp
+
+#Definição de propriedade no chown
+sudo chown nobody:nogroup /home/alex/ftp
+
+#Remoção de permissões para gravar
+sudo chmod a-w /home/alex/ftp
+
+#Verificar as permissões
+sudo ls -la /home/alex/ftp
+
+#Diretório com os arquivos
+sudo mkdir /home/alex/ftp/files
+
+#Permissões para o diretório onde contém os arquivos
+sudo chown alex:alex /home/alex/ftp/files
+
+#Exemplo de arquivo para realizar teste
+echo &quot;vsftpd sample file&quot; | sudo tee /home/alex/ftp/files/sample.txt
+
+#Aqui deve está o contéudo editado do sudo nano /etc/vsftpd.conf
+sudo nano /etc/vsftpd.conf
+
+#Criação e adição de nossos usuários ao arquivo
+echo &quot;alex&quot; | sudo tee -a /etc/vsftpd.userlist
+
+#Verifica se o usuário está realmente ativo, logo após este comando a saída deve
+#ser o nome do usuário cadastrado
+cat /etc/vsftpd.userlist
+
+#Reiniciar o vsftpd
+sudo systemctl restart vsftpd
+
+#Criação de certificado SSL
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem</code></pre><p id="f680f419-3c7c-4965-9c0d-9960ced19be3" class="">Eu vou ter que remodelar o tutorial porque tem uma parte que edita o arquivo vsftpd.conf duas vezes e isso pode dar bronca. Eu tenho que mostrar como fica o arquivo das duas formas.</p></details></li></ul><ul id="b781b0a5-2f91-484a-983d-75c0d2b8e9fd" class="toggle"><li><details open=""><summary>Conteúdo que deve está contido em:  <code>sudo nano /etc/vsftpd.conf</code></summary><pre id="bf08d9ca-1eaa-430b-a741-9ec431c41b0b" class="code"><code># Example config file /etc/vsftpd.conf
+#
+# The default compiled in settings are fairly paranoid. This sample file
+# loosens things up a bit, to make the ftp daemon more usable.
+# Please see vsftpd.conf.5 for all compiled in defaults.
+#
+# READ THIS: This example file is NOT an exhaustive list of vsftpd options.
+# Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd&#x27;s
+# capabilities.
+#
+#
+# Run standalone?  vsftpd can run either from an inetd or as a standalone
+# daemon started from an initscript.
+listen=NO
+#
+# This directive enables listening on IPv6 sockets. By default, listening
+# on the IPv6 &quot;any&quot; address (::) will accept connections from both IPv6
+# and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6
+# sockets. If you want that (perhaps because you want to listen on specific
+# addresses) then you must run two copies of vsftpd with two configuration
+# files.
+listen_ipv6=YES
+#
+# Allow anonymous FTP? (Disabled by default).
+anonymous_enable=NO
+#
+# Uncomment this to allow local users to log in.
+local_enable=YES
+#
+# Uncomment this to enable any form of FTP write command.
+write_enable=YES
+#
+# Default umask for local users is 077. You may wish to change this to 022,
+# if your users expect that (022 is used by most other ftpd&#x27;s)
+#local_umask=022
+#
+# Uncomment this to allow the anonymous FTP user to upload files. This only
+# has an effect if the above global write enable is activated. Also, you will
+# obviously need to create a directory writable by the FTP user.
+#anon_upload_enable=YES
+#
+# Uncomment this if you want the anonymous FTP user to be able to create
+# new directories.
+#anon_mkdir_write_enable=YES
+#
+# Activate directory messages - messages given to remote users when they
+# go into a certain directory.
+dirmessage_enable=YES
+#
+# If enabled, vsftpd will display directory listings with the time
+# in  your  local  time  zone.  The default is to display GMT. The
+# times returned by the MDTM FTP command are also affected by this
+# option.
+use_localtime=YES
+#
+# Activate logging of uploads/downloads.
+xferlog_enable=YES
+#
+# Make sure PORT transfer connections originate from port 20 (ftp-data).
+connect_from_port_20=YES
+#
+# If you want, you can arrange for uploaded anonymous files to be owned by
+# a different user. Note! Using &quot;root&quot; for uploaded files is not
+# recommended!
+#chown_uploads=YES
+#chown_username=whoever
+#
+# You may override where the log file goes if you like. The default is shown
+# below.
+#xferlog_file=/var/log/vsftpd.log
+#
+# If you want, you can have your log file in standard ftpd xferlog format.
+# Note that the default log file location is /var/log/xferlog in this case.
+#xferlog_std_format=YES
+#
+# You may change the default value for timing out an idle session.
+#idle_session_timeout=600
+#
+# You may change the default value for timing out a data connection.
+#data_connection_timeout=120
+#
+# It is recommended that you define on your system a unique user which the
+# ftp server can use as a totally isolated and unprivileged user.
+#nopriv_user=ftpsecure
+#
+# Enable this and the server will recognise asynchronous ABOR requests. Not
+# recommended for security (the code is non-trivial). Not enabling it,
+# however, may confuse older FTP clients.
+#async_abor_enable=YES
+#
+# By default the server will pretend to allow ASCII mode but in fact ignore
+# the request. Turn on the below options to have the server actually do ASCII
+# mangling on files when in ASCII mode.
+# Beware that on some FTP servers, ASCII support allows a denial of service
+# attack (DoS) via the command &quot;SIZE /big/file&quot; in ASCII mode. vsftpd
+# predicted this attack and has always been safe, reporting the size of the
+# raw file.
+# ASCII mangling is a horrible feature of the protocol.
+#ascii_upload_enable=YES
+#ascii_download_enable=YES
+#
+# You may fully customise the login banner string:
+#ftpd_banner=Welcome to blah FTP service.
+#
+# You may specify a file of disallowed anonymous e-mail addresses. Apparently
+# useful for combatting certain DoS attacks.
+#deny_email_enable=YES
+# (default follows)
+#banned_email_file=/etc/vsftpd.banned_emails
+#
+# You may restrict local users to their home directories.  See the FAQ for
+# the possible risks in this before using chroot_local_user or
+# chroot_list_enable below.
+chroot_local_user=YES
+#
+# You may specify an explicit list of local users to chroot() to their home
+# directory. If chroot_local_user is YES, then this list becomes a list of
+# users to NOT chroot().
+# (Warning! chroot&#x27;ing can be very dangerous. If using chroot, make sure that
+# the user does not have write access to the top level directory within the
+# chroot)
+#chroot_local_user=YES
+#chroot_list_enable=YES
+# (default follows)
+#chroot_list_file=/etc/vsftpd.chroot_list
+#
+# You may activate the &quot;-R&quot; option to the builtin ls. This is disabled by
+# default to avoid remote users being able to cause excessive I/O on large
+# sites. However, some broken FTP clients such as &quot;ncftp&quot; and &quot;mirror&quot; assume
+# the presence of the &quot;-R&quot; option, so there is a strong case for enabling it.
+#ls_recurse_enable=YES
+#
+# Customization
+#
+# Some of vsftpd&#x27;s settings don&#x27;t fit the filesystem layout by
+# default.
+# This option should be the name of a directory which is empty.  Also, the
+# directory should not be writable by the ftp user. This directory is used
+# as a secure chroot() jail at times vsftpd does not require filesystem
+# access.
+secure_chroot_dir=/var/run/vsftpd/empty
+#
+# This string is the name of the PAM service vsftpd will use.
+pam_service_name=vsftpd
+#
+# This option specifies the location of the RSA certificate to use for SSL
+# encrypted connections.
+# rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+# rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+rsa_cert_file=/etc/ssl/private/vsftpd.pem
+rsa_private_key_file=/etc/ssl/private/vsftpd.pem
+ssl_enable=YES
+allow_anon_ssl=NO
+force_local_data_ssl=YES
+force_local_logins_ssl=YES
+ssl_tlsv1=YES
+ssl_sslv2=NO
+ssl_sslv3=NO
+require_ssl_reuse=NO
+ssl_ciphers=HIGH
+#
+# Uncomment this to indicate that vsftpd use a utf8 filesystem.
+#utf8_filesystem=YES
+user_sub_token=$USER
+local_root=/home/$USER/ftp
+pasv_min_port=40000
+pasv_max_port=50000
+userlist_enable=YES
+userlist_file=/etc/vsftpd.userlist
+userlist_deny=NO</code></pre><p id="513add20-b681-44fe-b722-2ea6fa2f5458" class="">
+</p></details></li></ul><ul id="e926b8ba-7999-42dc-824b-d9f3861789ac" class="toggle"><li><details open=""><summary>Apenas adicionar usuários no VSFTPD sem precisar configurar tudo</summary><p id="f96a0538-8c1d-40c0-9661-d8dc8000247a" class="">
+</p></details></li></ul><ul id="a4bbb14f-7313-43ed-8eb7-d0ef0eaecaa5" class="toggle"><li><details open=""><summary>Criação do Chrooted</summary><p id="76495281-b1c3-41f7-99d0-34a88a53c780" class=""><a href="https://www.techrepublic.com/article/how-to-use-sftp-with-a-chroot-jail/">Melhor tutorial</a></p><p id="8be5d695-238a-4e4a-bccc-6cd73504a248" class="">sudo chown root:root /home/user001</p><figure id="eb3b882f-bd6c-4fa1-8d08-a8ce261104f8" class="image"><a href="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled%202.png"><img style="width:353px" src="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled%202.png"/></a></figure></details></li></ul><ul id="d65430ab-abc9-4a21-a725-9723ffee1db8" class="toggle"><li><details open=""><summary>Alterar diretório padrão do Apache</summary><p id="75b53c9c-cd76-49ac-8be7-649b4fda7d28" class=""><a href="https://allythy.github.io/Como-alterar-o-diretorio-padrao-do-Apache">https://allythy.github.io/Como-alterar-o-diretorio-padrao-do-Apache</a></p><figure id="59f70c1c-7bfa-4fff-9963-52522474aa40" class="image"><a href="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled.jpeg"><img style="width:1172px" src="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled.jpeg"/></a></figure><figure id="8b1acb26-537f-4b12-962c-a05c1b25b513" class="image"><a href="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled%201.jpeg"><img style="width:676px" src="Servidores%2061d9fb0410764f33aaf1ed728a0e00a0/Untitled%201.jpeg"/></a></figure></details></li></ul><ul id="9dfac63a-9911-4519-a990-a57ec25f3c8b" class="toggle"><li><details open=""><summary>Envio de arquivos SFTP pelo terminal</summary><p id="b7614269-678d-4bae-83b6-758ea76bcbce" class=""><a href="https://www.youtube.com/watch?v=4B42miS9tN4">https://www.youtube.com/watch?v=4B42miS9tN4</a></p></details></li></ul></details></li></ul><ul id="21863ba0-0cc7-4c8d-82bb-023438f7d59d" class="toggle"><li><details open=""><summary><strong>Instalação e configuração do NGINX</strong></summary><ul id="0678088c-dd1c-408b-9f86-ac768ca83f9e" class="toggle"><li><details open=""><summary>Instalar versão atualizada do Ngnix</summary><ul id="f73803ef-66f1-4a3d-a164-d0f7a3d0f3f3" class="toggle"><li><details open=""><summary>Referências</summary><p id="0cdc2f40-a776-47eb-8921-464bd8bca92e" class=""><a href="https://www.youtube.com/watch?v=hn17w828I-w">https://www.youtube.com/watch?v=hn17w828I-w</a></p><p id="2902e43b-795f-4866-af94-62c7a6e46c87" class=""><a href="https://www.alibabacloud.com/blog/how-to-build-nginx-from-source-on-ubuntu-20-04-lts_597793">https://www.alibabacloud.com/blog/how-to-build-nginx-from-source-on-ubuntu-20-04-lts_597793</a></p><p id="af272a95-2d00-49cb-95fa-2a517fe385e6" class=""><a href="http://nginx.org/en/download.html">Site onde tem a versão mais estável</a></p></details></li></ul><pre id="b0ad142e-5cdc-4d2f-b37c-272154bbf09f" class="code"><code>#A versão mais atualizada atualmente é a 1.22.1. É bom desinstalar outro servidor caso tenha
+sudo apt-get update
+sudo apt-get install build-essential libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev libgd-dev libxml2 libxml2-dev uuid-dev
+#Yes
+#Instalação da versão mais recente do Nginx obtida no site
+wget  http://nginx.org/download/nginx-1.22.1.tar.gz
+#Descompactando arquivo obtido na internet do Nginx atualizado
+tar -zxvf nginx-1.22.1.tar.gz
+#Entrando na pasta descompactada
+cd nginx-1.22.1
+./configure --prefix=/var/www/html --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --with-pcre  --lock-path=/var/lock/nginx.lock --pid-path=/var/run/nginx.pid --with-http_ssl_module --with-http_image_filter_module=dynamic --modules-path=/etc/nginx/modules --with-http_v2_module --with-stream=dynamic --with-http_addition_module --with-http_mp4_module
+make
+sudo make install
+#Executar o Nginx na máquina
+sudo nginx
+#Verificar a versão do Nginx
+sudo nginx -V
+#Servidor Nginx instalado</code></pre></details></li></ul><ul id="f14d8f7f-b28b-49a4-9dd8-28f6c7eb26e2" class="toggle"><li><details open=""><summary>Configurar Apache para iniciar automaticamente com o sistema</summary><ul id="0fe4f5be-3a97-446a-9bfc-e376bf96f5de" class="toggle"><li><details open=""><summary>Referências</summary><p id="775eb979-522c-4827-8f66-984e0fe00feb" class=""><a href="https://www.alibabacloud.com/blog/how-to-build-nginx-from-source-on-ubuntu-20-04-lts_597793">https://www.alibabacloud.com/blog/how-to-build-nginx-from-source-on-ubuntu-20-04-lts_597793</a></p></details></li></ul><pre id="8f2de40e-4be3-44f5-9005-d3a81996c09e" class="code"><code>#Verifica os processos que estão ativos no Nginx
+ps aux | grep nginx
+#Cria o arquivo para realizar a inicialiação do Nginx quando ligar o sistema
+nano /lib/systemd/system/nginx.service</code></pre><p id="f9692937-76aa-4772-9f63-c1d797b3fcfd" class="">Texto que deve ser contido no script nginx.service para habilitar o systemctl</p><pre id="a97b6487-a940-46a4-844a-86ddf6a7cac8" class="code"><code>[Unit]
+Description=The NGINX HTTP and reverse proxy server
+After=syslog.target network-online.target remote-fs.target nss-lookup.target
+Wants=network-online.target
+        
+[Service]
+Type=forking
+PIDFile=/var/run/nginx.pid
+ExecStartPre=/usr/sbin/nginx -t
+ExecStart=/usr/sbin/nginx
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+        
+[Install]
+WantedBy=multi-user.target</code></pre><p id="ba54adff-edfe-4268-a5f0-2c40ca130877" class="">Próximos comandos</p><pre id="aa6b0590-3b34-4664-84a9-08257a266d1a" class="code"><code>#Reiniciando o funcionamento do servidor
+systemctl restart nginx
+#Verificando o status do servidor
+systemctl status nginx
+#Habilitando o sistema Nginx
+systemctl enable nginx</code></pre></details></li></ul><ul id="b40d73cd-a7be-452c-8551-d70f23ed5c57" class="toggle"><li><details open=""><summary>Habilitando chaves públicas e privadas no Nginx mais atualizado</summary><ul id="6be30fe4-1dbc-42e1-99c9-cb736200a7ed" class="toggle"><li><details open=""><summary>Referências</summary><p id="6609b83d-4cf2-47d9-bb60-467427049f07" class=""><a href="https://techexpert.tips/pt-br/nginx-pt-br/habilitar-https-no-nginx/">https://techexpert.tips/pt-br/nginx-pt-br/habilitar-https-no-nginx/</a></p></details></li></ul><pre id="6bb32eed-712c-4eaf-96c6-8c172383e072" class="code"><code>mkdir /etc/nginx/certificate
+cd /etc/nginx/certificate
+openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out nginx-certificate.crt -keyout nginx.key</code></pre></details></li></ul><ul id="77084fa3-0601-4cdb-86de-b81c62f84d37" class="toggle"><li><details open=""><summary>Redirecionar Nginx para páginas HTTPs</summary><p id="257d028c-6cf9-4a78-aebb-f1a7e5acb651" class="">Arquivo para editar no Nginx do arquivo binário /etc/nginx/nginx.conf</p><pre id="6cfb1048-8dec-47b3-b87b-093741ebcf6c" class="code"><code>#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;
+    #                  &#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;
+    #                  &#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;;
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+		keepalive_timeout  65;
+
+    #gzip  on;
+
+    server {
+        listen       80;
+        server_name  localhost;
+				return 301 https://IP_da_maquina/;			
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   /home/alex/ftp_up;
+            index  index.html index.htm;
+        }
+
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+				
+				# proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+
+        # deny access to .htaccess files, if Apache&#x27;s document root
+        # concurs with nginx&#x27;s one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+    }
+
+		# another virtual host using mix of IP-, name-, and port-based configuration
+    #
+    #server {
+    #    listen       8000;
+    #    listen       somename:8080;
+    #    server_name  somename  alias  another.alias;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+
+    # HTTPS server
+    #
+    server {
+        listen       443 ssl;
+        server_name  localhost;
+
+        ssl_certificate      /etc/nginx/certificate/nginx-certificate.crt;
+        ssl_certificate_key  /etc/nginx/certificate/nginx.key;
+
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+
+		    location / {
+            root   /home/alex/ftp_up;
+            index  index.html index.htm;
+        }
+    }
+}</code></pre></details></li></ul><ul id="e54f8e0f-8ed0-438f-95c8-ce38b3f3974a" class="toggle"><li><details open=""><summary>Desinstalar o Nginx em caso de erro</summary><pre id="1c39d393-c917-420f-8adb-67c4654be515" class="code"><code>#Verificando a versão do Nginx
+sudo nginx -v
+#Removendo o Nginx e o Nginx-common (caso esteja instalado também)
+sudo apt remove nginx nginx-common
+#Yes
+#Dar o purge no Nginx e o Nginx-common
+sudo apt purge nginx nginx-common
+#Yes
+sudo apt autoremove
+#Yes
+#Verificar novamente se tem alguma versão instalada do Nginx
+sudo nginx -v</code></pre></details></li></ul></details></li></ul><ul id="4d4f8cd2-cbf2-4859-88d7-11d4951a5541" class="toggle"><li><details open=""><summary><strong>Instalação e configuração do Node.js</strong></summary><ul id="f0b10c81-0a0a-4b2a-bb32-fcd0df83f3d5" class="toggle"><li><details open=""><summary>Referências</summary><p id="fdc3b879-6014-436e-9bff-21b1f97f18e9" class=""><a href="https://github.com/nodejs/help/wiki/Installation#how-to-install-nodejs-via-binary-archive-on-aix">https://github.com/nodejs/help/wiki/Installation#how-to-install-nodejs-via-binary-archive-on-aix</a></p><p id="480311a1-a5e1-4d34-8d3f-f490167c0a54" class=""><a href="https://danvitoriano.medium.com/instalando-o-node-js-878421c593a5#:~:text=o%20NVM%20(recomendada)-,Op%C3%A7%C3%A3o%201%20%E2%80%94%20Baixando%20arquivo%20Bin%C3%A1rio,Basta%20executar%20o%20arquivo%20apenas">https://danvitoriano.medium.com/instalando-o-node-js-878421c593a5#:~:text=o NVM (recomendada)-,Opção 1 — Baixando arquivo Binário,Basta executar o arquivo apenas</a></p></details></li></ul><ul id="2e539a5f-8e03-4649-a2ad-e9584fae1896" class="toggle"><li><details open=""><summary>Instalação:</summary><pre id="b88faf2e-b82a-45e0-9523-05651170539a" class="code"><code>#Criando um diretório para fazer o downlaod do node
+sudo mkdir -p /usr/local/lib/nodejs
+#Entrar na pasta para realizar a extração
+cd /usr/local/lib/nodejs
+#Download Node - Substituir os X pela versão LTS
+wget https://nodejs.org/dist/vXX.XX.X/node-vXX.XX.XX-linux-x64.tar.xz
+#Descompactar o aquivo
+tar -xvf node-vXX.XX.X-linux-x64.tar.xz
+#Realizar o simlink para a pasta /usr/bin/
+sudo ln -s /usr/local/lib/nodejs/node-node-vXX.XX.XX-linux-x64/bin/node /usr/bin/node
+
+sudo ln -s /usr/local/lib/nodejs/node-node-vXX.XX.XX-linux-x64/bin/npm /usr/bin/npm
+
+sudo ln -s /usr/local/lib/nodejs/node-node-vXX.XX.XX-linux-x64/bin/npx /usr/bin/npx</code></pre></details></li></ul><ul id="29cb2264-3a9c-420f-84cc-fec46a71739c" class="toggle"><li><details open=""><summary>Configurando um aplicativo Node.js</summary><pre id="5ec7d67c-4776-4474-955b-1891dd9c6615" class="code"><code>#Criar uma aplicativo
+nano hello.js
+#Copiar o código para dentro do hello.js
+const http = require(&#x27;http&#x27;);
+
+const hostname = &#x27;localhost&#x27;;
+const port = 3000;
+
+const server = http.createServer((req, res) =&gt; {
+  res.statusCode = 200;
+  res.setHeader(&#x27;Content-Type&#x27;, &#x27;text/plain&#x27;);
+  res.end(&#x27;Hello World!\n&#x27;);
+});
+
+server.listen(port, hostname, () =&gt; {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+#Após salvar e sair, testar o aplicativo
+node hello.js
+#Nesse momento estará rodando o node, assim não pode escrever comandos sendo
+#sendo necessário abrir outro terminal para testar se o node está rodando
+#Após abrir o novo terminal dar o comando:
+curl http://localhost:3000
+#Será feita uma requisição e assim retornará
+Hello World!</code></pre><p id="445d56a6-4708-4720-a897-3645239ee1c4" class="">Comandos inscritos dentro do hello.js:</p><pre id="33de5ce3-0149-4e99-adb0-1631b0f18777" class="code"><code>#Módulo http: Cria o servidor
+const http = require(&quot;http&quot;);
+#Constantes indicando o host e a porta do servidor:
+const host = &#x27;localhost&#x27;;
+const port = 3000;</code></pre></details></li></ul></details></li></ul></div></article></body></html>
