@@ -8,6 +8,9 @@
 ![](./q3/q3_1.png)
 ![](./q3/q3_2.png)
 ![](./q3/q3_3.png)
+### Questão 4:
+![](./SSL/virtualHost.png)
+![](./SSL/teste.png)
 ### Questão 5:
 ![](./q5/q5.png)
 ![](./q5/q5_2.png)

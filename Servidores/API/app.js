@@ -1,8 +1,9 @@
 const express = require('express')
 const cors = require("cors");
 const app = express()
-const PORT = 8080;
-const host = 'localhost'
+require('dotenv').config()
+const PORT = process.env.PORT
+const HOST = process.env.HOST
 const Routes = require('./src/routers/routers'); 
 const bodyParser = require('body-parser');
 
@@ -14,6 +15,6 @@ app.use(Routes)
 
 
 
-app.listen(PORT, host, ()=>{
-    console.log(`servidor rodando em http://${host}:${PORT}`)
+app.listen(PORT, HOST, ()=>{
+    console.log(`servidor rodando em http://${HOST}:${PORT}`)
 })
