@@ -14,7 +14,8 @@ let obj = {
 nome.addEventListener('input', function(){
     // usando a tabela de octal para excluir os caracteres especiais link: https://docs.generic-mapping-tools.org/6.2/_images/GMT_App_F_stand+_iso+.png
     nome.value = nome.value.replace(/[\031-\037]/g, "")
-    nome.value = nome.value.replace(/[\041-\100]/g, "")
+    nome.value = nome.value.replace(/[\041-\057]/g, "")
+    nome.value = nome.value.replace(/[\072-\100]/g, "")
     nome.value = nome.value.replace(/[\133-\140]/g, "")
     nome.value = nome.value.replace(/[\173-\277]/g, "")
     
