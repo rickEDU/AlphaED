@@ -23,24 +23,25 @@ Requisito| Descrição   |
 ---------| ----------- |
 1 - Área central da praça. | A praça deve ter uma área central com espaço para atividades ao ar livre. 
 2 - Bancos e assentos. | Bancos e assentos confortáveis para descanso e socialização. 
-3 - Área de lazer para crianças. | Área de lazer para crianças, com equipamentos adequados e seguros. 
-4 - Acesso para pessoas com deficiência. | Acesso fácil para pessoas com deficiência física. 
-5 - Quadra de esporte. | Área de prática esportiva, como quadras de esportes ou campos de futebol. 
-6 - Ilumininação noturna. | Iluminação adequada para permitir atividades noturnas e aumentar a segurança. 
-7 - Quiosques. | Quiosques para venda de alimentos e bebidas. 
-8 - Estacionamento. | Estacionamento para bicicletas e veículos. 
-9 - Anfiteatro. | Espaço para apresentações artísticas, como um anfiteatro. 
-10 - Banheiros públicos. | Banheiros públicos limpos e acessíveis. 
-11 - Coleta seletiva de lixo. | Coleta seletiva de lixo para incentivar a reciclagem e a sustentabilidade. 
-12 - Sistema de vigilância. | Sistema de segurança adequado, com câmeras de vigilância e seguranças. 
+3 - Área de lazer para crianças. | Deve ter uma área de lazer para crianças, com equipamentos adequados e seguros. 
+4 - Acesso para pessoas com deficiência. | Deve ser de acesso fácil para pessoas com deficiência. 
+5 - Quadra de esporte. | Deve ter uma área destinada a atividade esportiva, como um campo de futebol.
+6 - Ilumininação noturna. | Deve ter iluminção adequada para permitir atividades noturnas e aumentar a segurança. 
+7 - Quiosques. | Deve ter 2 Quiosques para a venda de alimentos e bebidas.
+8 - Estacionamento. | Deve ter um estacionamento para bicicletas e automóveis.
+9 - Anfiteatro. | Deve ter um espaço para apresentações artísticas, como um anfiteatro. 
+10 - Banheiros públicos. | Deve ter banheiros públicos limpos e acessíveis.
+11 - Coleta seletiva de lixo. | Deve ter coleta seletiva de lixo, para insentivar a reciclagem e a sustentabilidade.
+12 - Sistema de vigilância. | Deve ter um sistema de vigilância, com câmeras, para dar maior segurança aos vizitantes.
+ 
 
 
 ## Requisitos não funcionais 
 Requisitos| Descrição|
 ----------| ---------|
-1 - Deve ser usado materias duráveis.| Segurança estrutural da praça, com uso de materiais resistentes e duráveis.|
-2 - Deve ter pisos tateis, e ser bem sinalizado. | Acessibilidade, com rampas de acesso, pisos táteis e sinalização adequada.|
-3 - Deve ser mantida limpa, e ter funcionários para fazer a manutenção. | Manutenção adequada, com cronograma de limpeza, reparos e substituição de equipamentos desgastados.|
+1 - Deve ser usado materias duráveis.| Para dar maior segurança estrutural a praça, deve ser utilizados materiais resistentes e duráveis.|
+2 - Deve ter pisos tateis, e ser bem sinalizado. | A praça deve ser acessível, com rampas de acesso, pisos táteis, para os vizitantes com alguma necessidade especial.|
+3 - Deve ser mantida limpa, e ter funcionários para fazer a manutenção. | Deve ter uma manutenção adequada, com cronograma de limpeza, reparos e substituições de equipamento desgastados.|
 4 - Deve ser harmonioza com as estruturas da vizinhança. | A praça tem que ser inserida no bairro, de forma que não fique destoante com os prédios da vizinhança. | 
 
 ## Regras de negócio:
