@@ -152,7 +152,12 @@ customElements.define("email-input", EmailInput)
 customElements.define("name-input", NameInput)
 customElements.define("passwd-input", PasswordInput)
 
-
+const create = document.querySelector('.create')
+const login = document.querySelector('.login')
+const update = document.querySelector('.update')
+create?.addEventListener('click', createAcount)
+login?.addEventListener('click', loginAcount)
+update?.addEventListener('click', updateAcount)
 async function createAcount() {
     const button = document.querySelector('.create') as HTMLInputElement
     button.disabled = true

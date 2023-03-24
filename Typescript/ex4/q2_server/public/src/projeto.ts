@@ -80,8 +80,18 @@ class EmailInput extends HTMLElement {
         input.placeholder = "Digite seu email."
         input.onchange = () => {
             try{
+                const shadow = document.querySelector("name-input")?.shadowRoot;
+                const nameInput= shadow?.querySelector('.nameInput') as HTMLInputElement
+
+                const shadow2 = document.querySelector("passwd-input")?.shadowRoot;
+                const passwordInput= shadow2?.querySelector('.passwordInput') as HTMLInputElement
+
+                if(nameInput.value.length != 0 && passwordInput.value.length != 0){
+                    button.disabled = false
+                }
                 new EmailValidator(input.value);
             }catch(error){
+                button.disabled = true
                 input.value = ``
                 console.log(error)
             }
@@ -100,8 +110,20 @@ class NameInput extends HTMLElement {
         input.placeholder = "Digite seu nome."
         input.onchange = () => {
             try{
+                
+                const shadow = document.querySelector('email-input')?.shadowRoot;
+                const emailInput = shadow?.querySelector('.emailInput') as HTMLInputElement
+
+            
+                const shadow2 = document.querySelector("passwd-input")?.shadowRoot;
+                const passwordInput= shadow2?.querySelector('.passwordInput') as HTMLInputElement
+
+                if(emailInput.value.length != 0 && passwordInput.value.length != 0){
+                    button.disabled = false
+                }
                 new NameValidator(input.value);
             }catch(error){
+                button.disabled = true
                 input.value = ``
                 console.log(error)
             }
@@ -121,8 +143,21 @@ class PasswordInput extends HTMLElement {
         input.placeholder = "Digite sua senha."
         input.onchange = () => {
             try{
+
+
+                const shadow = document.querySelector('email-input')?.shadowRoot;
+                const emailInput = shadow?.querySelector('.emailInput') as HTMLInputElement
+
+            
+                const shadow2 = document.querySelector("name-input")?.shadowRoot;
+                const nameInput= shadow2?.querySelector('.nameInput') as HTMLInputElement
+
+                if(emailInput.value.length != 0 && nameInput.value.length != 0){
+                    button.disabled = false
+                }
                 new PasswordValidator(input.value);
             }catch(error){
+                button.disabled = true
                 input.value = ``
                 console.log(error)
             }
@@ -147,6 +182,7 @@ interface IUserData {
 interface LoginData {
     id: number
 }
+  
 
 customElements.define("email-input", EmailInput)
 customElements.define("name-input", NameInput)
@@ -155,7 +191,7 @@ customElements.define("passwd-input", PasswordInput)
 
 async function createAcount() {
     const button = document.querySelector('.create') as HTMLInputElement
-    button.disabled = true
+    // valor do input da email
     const shadow_email = document.querySelector('email-input')?.shadowRoot;
     const email = shadow_email?.querySelector('.emailInput') as HTMLInputElement
 
@@ -167,6 +203,9 @@ async function createAcount() {
     const shadow_password = document.querySelector('passwd-input')?.shadowRoot;
     const password = shadow_password?.querySelector('.passwordInput') as HTMLInputElement
 
+    console.log(email.value);
+    console.log(name.value);
+    console.log(password.value);
     try{
         if(email.value.length==0){
             throw new Error('Digite um email!');
@@ -182,23 +221,17 @@ async function createAcount() {
             name: name.value,
             password: password.value
         }
-        await fetch_create(body);
-        button.disabled = false
+        const response  = await fetch_create(body);
+        console.log(response);
 
     }catch(error:any){
-        button.disabled = false
         const message = document.querySelector('#message') as HTMLDivElement
         message.innerHTML = error
-        message.style.color = 'red'
-        setTimeout(() => {
-            message.innerHTML = ''
-        }, 4000);
         console.log(error)
     }
 } 
-async function updateAcount() {
-    const button = document.querySelector('.update') as HTMLInputElement
-    button.disabled = true
+function updateAcount() {
+    const button = document.querySelector('.create') as HTMLInputElement
     // valor do input da email
     const shadow_email = document.querySelector('email-input')?.shadowRoot;
     const email = shadow_email?.querySelector('.emailInput') as HTMLInputElement
@@ -211,6 +244,9 @@ async function updateAcount() {
     const shadow_password = document.querySelector('passwd-input')?.shadowRoot;
     const password = shadow_password?.querySelector('.passwordInput') as HTMLInputElement
 
+    console.log(email.value);
+    console.log(name.value);
+    console.log(password.value);
     try{
         if(email.value.length==0){
             throw new Error('Digite um email!');
@@ -226,24 +262,17 @@ async function updateAcount() {
             name: name.value,
             password: password.value
         }
-        await fetch_update(body)
-        button.disabled = false
+        fetch_update(body)
 
     }catch(error:any){
-        button.disabled = false
         const message = document.querySelector('#message') as HTMLDivElement
         message.innerHTML = error
-        message.style.color = 'red'
-        setTimeout(() => {
-            message.innerHTML = ''
-        }, 4000);
         console.log(error)
     }
 } 
 
-async function loginAcount() {
-    const button = document.querySelector('.login') as HTMLInputElement
-    button.disabled = true
+function loginAcount() {
+    const button = document.querySelector('.create') as HTMLInputElement
     // valor do input da email
     const shadow_email = document.querySelector('email-input')?.shadowRoot;
     const email = shadow_email?.querySelector('.emailInput') as HTMLInputElement
@@ -256,35 +285,40 @@ async function loginAcount() {
     const shadow_password = document.querySelector('passwd-input')?.shadowRoot;
     const password = shadow_password?.querySelector('.passwordInput') as HTMLInputElement
 
+    console.log(email.value);
+    console.log(name.value);
+    console.log(password.value);
     try{
         if(email.value.length==0){
             throw new Error('Digite um email!');
+        }
+        if(name.value.length==0){
+            throw new Error('Digite um nome!');
         }
         if(password.value.length==0){
             throw new Error('Digite uma senha!');
         }
         const body: object = {
             email: email.value,
+            name: name.value,
             password: password.value
         }
-        await fetch_login(body)
-        button.disabled = false
+        fetch_login(body)
 
     }catch(error:any){
-        button.disabled = false
         const message = document.querySelector('#message') as HTMLDivElement
         message.innerHTML = error
-        message.style.color = 'red'
-        setTimeout(() => {
-            message.innerHTML = ''
-        }, 4000);
         console.log(error)
     }
 } 
+
+const button = document.querySelector('.create') as HTMLInputElement
+button.disabled = true
 
 
 async function fetch_create(body:object){
     try{
+        console.log("body: ", body)
         const options : RequestInit = {
             method: "POST",
             headers: {"Content-Type":"Application/json"},

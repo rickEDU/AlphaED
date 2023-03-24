@@ -80,10 +80,19 @@ class EmailInput extends HTMLElement {
         input.className = 'emailInput';
         input.placeholder = "Digite seu email.";
         input.onchange = () => {
+            var _a, _b;
             try {
+                const shadow = (_a = document.querySelector("name-input")) === null || _a === void 0 ? void 0 : _a.shadowRoot;
+                const nameInput = shadow === null || shadow === void 0 ? void 0 : shadow.querySelector('.nameInput');
+                const shadow2 = (_b = document.querySelector("passwd-input")) === null || _b === void 0 ? void 0 : _b.shadowRoot;
+                const passwordInput = shadow2 === null || shadow2 === void 0 ? void 0 : shadow2.querySelector('.passwordInput');
+                if (nameInput.value.length != 0 && passwordInput.value.length != 0) {
+                    button.disabled = false;
+                }
                 new EmailValidator(input.value);
             }
             catch (error) {
+                button.disabled = true;
                 input.value = ``;
                 console.log(error);
             }
@@ -100,10 +109,19 @@ class NameInput extends HTMLElement {
         input.className = 'nameInput';
         input.placeholder = "Digite seu nome.";
         input.onchange = () => {
+            var _a, _b;
             try {
+                const shadow = (_a = document.querySelector('email-input')) === null || _a === void 0 ? void 0 : _a.shadowRoot;
+                const emailInput = shadow === null || shadow === void 0 ? void 0 : shadow.querySelector('.emailInput');
+                const shadow2 = (_b = document.querySelector("passwd-input")) === null || _b === void 0 ? void 0 : _b.shadowRoot;
+                const passwordInput = shadow2 === null || shadow2 === void 0 ? void 0 : shadow2.querySelector('.passwordInput');
+                if (emailInput.value.length != 0 && passwordInput.value.length != 0) {
+                    button.disabled = false;
+                }
                 new NameValidator(input.value);
             }
             catch (error) {
+                button.disabled = true;
                 input.value = ``;
                 console.log(error);
             }
@@ -120,10 +138,19 @@ class PasswordInput extends HTMLElement {
         input.className = 'passwordInput';
         input.placeholder = "Digite sua senha.";
         input.onchange = () => {
+            var _a, _b;
             try {
+                const shadow = (_a = document.querySelector('email-input')) === null || _a === void 0 ? void 0 : _a.shadowRoot;
+                const emailInput = shadow === null || shadow === void 0 ? void 0 : shadow.querySelector('.emailInput');
+                const shadow2 = (_b = document.querySelector("name-input")) === null || _b === void 0 ? void 0 : _b.shadowRoot;
+                const nameInput = shadow2 === null || shadow2 === void 0 ? void 0 : shadow2.querySelector('.nameInput');
+                if (emailInput.value.length != 0 && nameInput.value.length != 0) {
+                    button.disabled = false;
+                }
                 new PasswordValidator(input.value);
             }
             catch (error) {
+                button.disabled = true;
                 input.value = ``;
                 console.log(error);
             }
@@ -138,7 +165,7 @@ function createAcount() {
     var _a, _b, _c;
     return __awaiter(this, void 0, void 0, function* () {
         const button = document.querySelector('.create');
-        button.disabled = true;
+        // valor do input da email
         const shadow_email = (_a = document.querySelector('email-input')) === null || _a === void 0 ? void 0 : _a.shadowRoot;
         const email = shadow_email === null || shadow_email === void 0 ? void 0 : shadow_email.querySelector('.emailInput');
         // valor do input nome
@@ -147,6 +174,9 @@ function createAcount() {
         // valor do input senha
         const shadow_password = (_c = document.querySelector('passwd-input')) === null || _c === void 0 ? void 0 : _c.shadowRoot;
         const password = shadow_password === null || shadow_password === void 0 ? void 0 : shadow_password.querySelector('.passwordInput');
+        console.log(email.value);
+        console.log(name.value);
+        console.log(password.value);
         try {
             if (email.value.length == 0) {
                 throw new Error('Digite um email!');
@@ -162,115 +192,108 @@ function createAcount() {
                 name: name.value,
                 password: password.value
             };
-            yield fetch_create(body);
-            button.disabled = false;
+            const response = yield fetch_create(body);
+            console.log(response);
         }
         catch (error) {
-            button.disabled = false;
             const message = document.querySelector('#message');
             message.innerHTML = error;
-            message.style.color = 'red';
-            setTimeout(() => {
-                message.innerHTML = '';
-            }, 4000);
             console.log(error);
         }
     });
 }
 function updateAcount() {
     var _a, _b, _c;
-    return __awaiter(this, void 0, void 0, function* () {
-        const button = document.querySelector('.update');
-        button.disabled = true;
-        // valor do input da email
-        const shadow_email = (_a = document.querySelector('email-input')) === null || _a === void 0 ? void 0 : _a.shadowRoot;
-        const email = shadow_email === null || shadow_email === void 0 ? void 0 : shadow_email.querySelector('.emailInput');
-        // valor do input nome
-        const shadow_name = (_b = document.querySelector("name-input")) === null || _b === void 0 ? void 0 : _b.shadowRoot;
-        const name = shadow_name === null || shadow_name === void 0 ? void 0 : shadow_name.querySelector('.nameInput');
-        // valor do input senha
-        const shadow_password = (_c = document.querySelector('passwd-input')) === null || _c === void 0 ? void 0 : _c.shadowRoot;
-        const password = shadow_password === null || shadow_password === void 0 ? void 0 : shadow_password.querySelector('.passwordInput');
-        try {
-            if (email.value.length == 0) {
-                throw new Error('Digite um email!');
-            }
-            if (name.value.length == 0) {
-                throw new Error('Digite um nome!');
-            }
-            if (password.value.length == 0) {
-                throw new Error('Digite uma senha!');
-            }
-            const body = {
-                email: email.value,
-                name: name.value,
-                password: password.value
-            };
-            yield fetch_update(body);
-            button.disabled = false;
+    const button = document.querySelector('.create');
+    // valor do input da email
+    const shadow_email = (_a = document.querySelector('email-input')) === null || _a === void 0 ? void 0 : _a.shadowRoot;
+    const email = shadow_email === null || shadow_email === void 0 ? void 0 : shadow_email.querySelector('.emailInput');
+    // valor do input nome
+    const shadow_name = (_b = document.querySelector("name-input")) === null || _b === void 0 ? void 0 : _b.shadowRoot;
+    const name = shadow_name === null || shadow_name === void 0 ? void 0 : shadow_name.querySelector('.nameInput');
+    // valor do input senha
+    const shadow_password = (_c = document.querySelector('passwd-input')) === null || _c === void 0 ? void 0 : _c.shadowRoot;
+    const password = shadow_password === null || shadow_password === void 0 ? void 0 : shadow_password.querySelector('.passwordInput');
+    console.log(email.value);
+    console.log(name.value);
+    console.log(password.value);
+    try {
+        if (email.value.length == 0) {
+            throw new Error('Digite um email!');
         }
-        catch (error) {
-            button.disabled = false;
-            const message = document.querySelector('#message');
-            message.innerHTML = error;
-            message.style.color = 'red';
-            setTimeout(() => {
-                message.innerHTML = '';
-            }, 4000);
-            console.log(error);
+        if (name.value.length == 0) {
+            throw new Error('Digite um nome!');
         }
-    });
+        if (password.value.length == 0) {
+            throw new Error('Digite uma senha!');
+        }
+        const body = {
+            email: email.value,
+            name: name.value,
+            password: password.value
+        };
+        fetch_update(body);
+    }
+    catch (error) {
+        const message = document.querySelector('#message');
+        message.innerHTML = error;
+        console.log(error);
+    }
 }
 function loginAcount() {
     var _a, _b, _c;
-    return __awaiter(this, void 0, void 0, function* () {
-        const button = document.querySelector('.login');
-        button.disabled = true;
-        // valor do input da email
-        const shadow_email = (_a = document.querySelector('email-input')) === null || _a === void 0 ? void 0 : _a.shadowRoot;
-        const email = shadow_email === null || shadow_email === void 0 ? void 0 : shadow_email.querySelector('.emailInput');
-        // valor do input nome
-        const shadow_name = (_b = document.querySelector("name-input")) === null || _b === void 0 ? void 0 : _b.shadowRoot;
-        const name = shadow_name === null || shadow_name === void 0 ? void 0 : shadow_name.querySelector('.nameInput');
-        // valor do input senha
-        const shadow_password = (_c = document.querySelector('passwd-input')) === null || _c === void 0 ? void 0 : _c.shadowRoot;
-        const password = shadow_password === null || shadow_password === void 0 ? void 0 : shadow_password.querySelector('.passwordInput');
-        try {
-            if (email.value.length == 0) {
-                throw new Error('Digite um email!');
-            }
-            if (password.value.length == 0) {
-                throw new Error('Digite uma senha!');
-            }
-            const body = {
-                email: email.value,
-                password: password.value
-            };
-            yield fetch_login(body);
-            button.disabled = false;
+    const button = document.querySelector('.create');
+    // valor do input da email
+    const shadow_email = (_a = document.querySelector('email-input')) === null || _a === void 0 ? void 0 : _a.shadowRoot;
+    const email = shadow_email === null || shadow_email === void 0 ? void 0 : shadow_email.querySelector('.emailInput');
+    // valor do input nome
+    const shadow_name = (_b = document.querySelector("name-input")) === null || _b === void 0 ? void 0 : _b.shadowRoot;
+    const name = shadow_name === null || shadow_name === void 0 ? void 0 : shadow_name.querySelector('.nameInput');
+    // valor do input senha
+    const shadow_password = (_c = document.querySelector('passwd-input')) === null || _c === void 0 ? void 0 : _c.shadowRoot;
+    const password = shadow_password === null || shadow_password === void 0 ? void 0 : shadow_password.querySelector('.passwordInput');
+    console.log(email.value);
+    console.log(name.value);
+    console.log(password.value);
+    try {
+        if (email.value.length == 0) {
+            throw new Error('Digite um email!');
         }
-        catch (error) {
-            button.disabled = false;
-            const message = document.querySelector('#message');
-            message.innerHTML = error;
-            message.style.color = 'red';
-            setTimeout(() => {
-                message.innerHTML = '';
-            }, 4000);
-            console.log(error);
+        if (name.value.length == 0) {
+            throw new Error('Digite um nome!');
         }
-    });
+        if (password.value.length == 0) {
+            throw new Error('Digite uma senha!');
+        }
+        const body = {
+            email: email.value,
+            name: name.value,
+            password: password.value
+        };
+        fetch_login(body);
+    }
+    catch (error) {
+        const message = document.querySelector('#message');
+        message.innerHTML = error;
+        console.log(error);
+    }
 }
+const button = document.querySelector('.create');
+button.disabled = true;
 function fetch_create(body) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            console.log("body: ", body);
             const options = {
+                // mode:'no-cors',
                 method: "POST",
                 headers: { "Content-Type": "Application/json" },
                 body: JSON.stringify(body)
             };
             const response = yield fetch('http://localhost:8000/accounts', options);
+            console.log(response);
             const json = yield response.json();
+            console.log(json);
             return json;
         }
         catch (error) {
