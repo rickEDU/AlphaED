@@ -16,7 +16,7 @@
   * Dia 9 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex9_A) Calculadora
   * Dia 9 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex9_B) Calculadora da Morte
   * Dia 10 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex10) Array com objeto
-  * Dia 11 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex11) Array com objeto, Filtro, Search, Ordena (crescente e decrescente
+  * Dia 11 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex11) Array com objeto, Filtro, Search, Ordena (crescente e decrescente)
   * Dia 12 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex12_A) Números primos entre 0 e 100.000
   * Dia 12 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex12_B) Pocker simplificado
   * Dia 13 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex13) Jogo da velha
@@ -34,8 +34,23 @@
   * Dia 22 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex22_B) Class mago e cowboy, Herança.
 
  * **Servidores**
-   * Tutoriais de instalação:
-     * [FTP-SFTP](https://github.com/rickEDU/AlphaED/blob/main/Servidores/ftp-sftp.md)
-     * [Apache2](https://github.com/rickEDU/AlphaED/blob/main/Servidores/apache.md)
-     * [Nginx](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nginx.md)
-     * [node.js](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nodejs.md)
+    * [Principal](https://github.com/rickEDU/AlphaED/tree/main/Servidores)
+    * Tutoriais de instalação:
+      * [FTP-SFTP](https://github.com/rickEDU/AlphaED/blob/main/Servidores/ftp-sftp.md)
+      * [Apache2](https://github.com/rickEDU/AlphaED/blob/main/Servidores/apache.md)
+      * [Nginx](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nginx.md)
+      * [node.js](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nodejs.md)
+  * **Typescript**
+    * [Exercício 1](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex1)
+    * [Exercício 2](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex2)
+    * [Exercício 3](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex3)
+    * Exercício 4:
+      * [Questão 1](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex4/q1)
+      * [Questão 2](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex4/q2)
+      * [Server_exemplo: Questão 2](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex4/q2_server)
+    * [Exercício 5](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex5/q1)
+  * **Controle de Sessão**
+    * [Exercício 1](https://github.com/rickEDU/AlphaED/tree/main/Controle%20de%20sess%C3%A3o/controleEx1_q2)
+    * [Exercício 2](https://github.com/rickEDU/AlphaED/tree/main/Controle%20de%20sess%C3%A3o/controleEx2_q3)
+  * **Soft Skills**
+    * [Requisitos da praça](https://github.com/rickEDU/AlphaED/blob/main/soft_skills/requisitos.md)
