@@ -10,3 +10,12 @@ export interface IUserData {
 export interface LoginData {
     id: number
 }
+export interface IConection{
+    text: string,
+    values: Array<string>
+}
+export interface IData{
+    name: string,
+    email: string,
+    password: string
+}

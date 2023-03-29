@@ -3,6 +3,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors'
 import { router } from './router/router';
 
+
 export class App{
     public server: express.Application;
 

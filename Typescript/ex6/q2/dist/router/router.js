@@ -11,3 +11,4 @@ exports.router = router;
 const controller = new accounts_1.default();
 router.get('/teste', controller.teste);
 router.post('/accounts', controller.create);
+router.patch('/accounts', controller.update);
