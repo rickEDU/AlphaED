@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { IDataAPI, IDataLogin} from "../interfaces/interfaces"
+import { IData, IDataAPI, IDataLogin} from "../interfaces/interfaces"
 import { NameValidator, EmailValidator, PasswordValidator } from "../helpers/helper"
 import serviceAccount from "../service/accounts"
 import jwt from 'jsonwebtoken'
@@ -25,7 +25,7 @@ export default class account{
             const service = new serviceAccount
             const response:IDataAPI|undefined = await service.SvCreate({name, email, password})
             if(!response){
-                throw 'Account creation error'
+                throw 'Error: Account creation error'
             }
             res.status(201).json({message:"Sucess", code: 201, data: response, error: null})
         }catch(e){
@@ -36,21 +36,32 @@ export default class account{
 
     public async update(req:Request, res: Response){
         try{
-            const {name, email, password, decoded} = req.body
+            const {name, email, decoded} = req.body
+
             const validatorName = new NameValidator(name)
             const validatorEmail = new EmailValidator(email)
-            const validatorPassword = new PasswordValidator(password)
+            
             if(validatorName.fail){
                 throw validatorName.message
             }else if(validatorEmail.fail){
                 throw validatorEmail.message
-            }else if(validatorPassword.fail){
-                throw validatorPassword.message
+            }
+            let body:IData = {name:name, email: email} 
+            if(req.body.password!=undefined){
+                body.password = req.body.password
+                const validatorPassword = new PasswordValidator(body.password)
+                if(validatorPassword.fail){
+                    throw validatorPassword.message
+                }
             }
             const service = new serviceAccount
-            const response:IDataAPI|undefined = await service.SvUpdate({name, email, password}, decoded.id);
+            const search:IData|undefined = await service.SvSearch(decoded.id)
+            if(!search){
+                return res.status(404).json({message:"Error",code:404, data: null, error: 'Error: Account Not Found.'})
+            }
+            const response:IDataAPI|undefined = await service.SvUpdate(search,body, decoded.id);
             if(!response){
-                return res.status(404).json({message:"Error",code:404, data: null, error: 'Account Not Found'})
+                return res.status(400).json({message:"Error",code:400, data: null, error: 'Error: Internal error.'})
             }
             res.status(200).json({message:"Sucess", code:200, data: response, error: null})
         }catch(e){

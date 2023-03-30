@@ -36,7 +36,7 @@ class account {
                 const service = new accounts_1.default;
                 const response = yield service.SvCreate({ name, email, password });
                 if (!response) {
-                    throw 'Account creation error';
+                    throw 'Error: Account creation error';
                 }
                 res.status(201).json({ message: "Sucess", code: 201, data: response, error: null });
             }
@@ -49,23 +49,31 @@ class account {
     update(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const { name, email, password, decoded } = req.body;
+                const { name, email, decoded } = req.body;
                 const validatorName = new helper_1.NameValidator(name);
                 const validatorEmail = new helper_1.EmailValidator(email);
-                const validatorPassword = new helper_1.PasswordValidator(password);
                 if (validatorName.fail) {
                     throw validatorName.message;
                 }
                 else if (validatorEmail.fail) {
                     throw validatorEmail.message;
                 }
-                else if (validatorPassword.fail) {
-                    throw validatorPassword.message;
+                let body = { name: name, email: email };
+                if (req.body.password != undefined) {
+                    body.password = req.body.password;
+                    const validatorPassword = new helper_1.PasswordValidator(body.password);
+                    if (validatorPassword.fail) {
+                        throw validatorPassword.message;
+                    }
                 }
                 const service = new accounts_1.default;
-                const response = yield service.SvUpdate({ name, email, password }, decoded.id);
+                const search = yield service.SvSearch(decoded.id);
+                if (!search) {
+                    return res.status(404).json({ message: "Error", code: 404, data: null, error: 'Error: Account Not Found.' });
+                }
+                const response = yield service.SvUpdate(search, body, decoded.id);
                 if (!response) {
-                    return res.status(404).json({ message: "Error", code: 404, data: null, error: 'Account Not Found' });
+                    return res.status(400).json({ message: "Error", code: 400, data: null, error: 'Error: Internal error.' });
                 }
                 res.status(200).json({ message: "Sucess", code: 200, data: response, error: null });
             }

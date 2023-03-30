@@ -21,21 +21,21 @@ class RegexValidator {
 class EmailValidator extends RegexValidator {
     constructor(data) {
         const data_regex = new RegExp(/^(\w{1,}@\w{1,}\.(\w{3})(\.\w{2}){0,1})$/gim);
-        super(data, data_regex, 'O Email inválido');
+        super(data, data_regex, 'Email inválido');
     }
 }
 exports.EmailValidator = EmailValidator;
 class PasswordValidator extends RegexValidator {
     constructor(data) {
         const data_regex = new RegExp(/^\w{1,}$/gim);
-        super(data, data_regex, 'A senha inválida');
+        super(data, data_regex, 'Senha inválida');
     }
 }
 exports.PasswordValidator = PasswordValidator;
 class NameValidator extends RegexValidator {
     constructor(data) {
-        const data_regex = new RegExp(/^[a-z]{1,}$/gim);
-        super(data, data_regex, 'O nome inválido');
+        const data_regex = new RegExp(/^[a-z ]{1,}$/gim);
+        super(data, data_regex, 'Nome inválido');
     }
 }
 exports.NameValidator = NameValidator;

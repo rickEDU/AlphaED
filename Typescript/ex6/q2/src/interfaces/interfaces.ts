@@ -17,7 +17,7 @@ export interface IConection{
 export interface IData{
     name: string,
     email: string,
-    password: string
+    password?: string
 }
 export interface IDataLogin{
     id:string|number,
