@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const conection_1 = require("../repository/conection");
+const TAG = '/SERVICE';
 class serviceAccount {
     SvCreate(data) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -23,7 +24,7 @@ class serviceAccount {
                 return response;
             }
             catch (e) {
-                console.log(e);
+                console.log(TAG, e);
             }
         });
     }
@@ -36,11 +37,28 @@ class serviceAccount {
                     values: [data.name, data.email, data.password, id]
                 };
                 const response = yield conected.execulteQuery(query);
-                console.log(response);
                 return response;
             }
             catch (e) {
-                console.log(e);
+                console.log(TAG, e);
+                throw e;
+            }
+        });
+    }
+    SvLogin(email) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const conected = new conection_1.conection();
+                const query = {
+                    text: 'select id, email, password from accounts where email=$1',
+                    values: [email]
+                };
+                const response = yield conected.execulteQuery(query);
+                return response;
+            }
+            catch (e) {
+                console.log(TAG, e);
+                throw e;
             }
         });
     }

@@ -1,5 +1,3 @@
-import { APIResponse } from "../interfaces/interfaces";
-
 abstract class RegexValidator{
     public message: string;
     public fail: boolean = false;

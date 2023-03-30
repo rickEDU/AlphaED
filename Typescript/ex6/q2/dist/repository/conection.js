@@ -19,7 +19,8 @@ class conection {
                 return response.rows[0];
             }
             catch (e) {
-                console.log(e);
+                console.log("error conection", e);
+                throw 'Connection to database error: ' + e;
             }
         });
     }
