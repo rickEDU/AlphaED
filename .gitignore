@@ -1,4 +1,5 @@
 .vscode
 fetch/
+.env
 node_modules/
 back-end-ts/
