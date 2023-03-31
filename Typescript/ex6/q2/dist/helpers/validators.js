@@ -3,16 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.NameValidator = exports.PasswordValidator = exports.EmailValidator = void 0;
 class RegexValidator {
     constructor(data, data_regex, type) {
-        this.fail = false;
         this.data_regex = new RegExp('');
         this.data_regex = data_regex;
         if (!this.regex.test(data)) {
-            this.message = `Error: ${type}`;
-            this.fail = true;
             throw `Error: ${type}`;
-        }
-        else {
-            this.message = 'Sucess';
         }
     }
     get regex() {
@@ -35,8 +29,11 @@ class PasswordValidator extends RegexValidator {
 exports.PasswordValidator = PasswordValidator;
 class NameValidator extends RegexValidator {
     constructor(data) {
-        const data_regex = new RegExp(/^[a-z ]{1,}$/gim);
-        super(data, data_regex, 'Nome inválido teste aqui');
+        //Regex que pega um nome completo 
+        // const data_regex: RegExp = new RegExp(/^([a-z]{1,})([ ]{1}[a-z]{1,}){0,}$/gim);
+        //Esse de baixo pega só um nome sem espaços, colocou espaços da erro: 
+        const data_regex = new RegExp(/^[a-z]{1,}$/gim);
+        super(data, data_regex, 'Nome inválido');
     }
 }
 exports.NameValidator = NameValidator;

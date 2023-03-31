@@ -1,6 +1,8 @@
 export interface APIResponse<T> {
-    data: T,
-    error: Array<string>
+    message:string,
+    code:number,
+    data?: T|null,
+    error: Array<string|null>
 }
 export interface IDataAPI {
     id: number | string,
@@ -8,7 +10,7 @@ export interface IDataAPI {
     name: string
 }
 export interface IResponseLogin {
-    id: number
+    id: number|string
 }
 export interface IConection{
     text: string,

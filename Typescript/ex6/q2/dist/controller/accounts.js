@@ -12,96 +12,129 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const helper_1 = require("../helpers/helper");
+const validators_1 = require("../helpers/validators");
 const accounts_1 = __importDefault(require("../service/accounts"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const TAG = '/CONTROLLER ';
 class account {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const API_response = {
+                message: 'Sucess',
+                code: 201,
+                data: {
+                    id: 0,
+                    email: '',
+                    name: ''
+                },
+                error: [null]
+            };
+            const API_error = {
+                message: 'Error',
+                code: 400,
+                data: null,
+                error: [null]
+            };
             try {
                 const { name, email, password } = req.body;
-                const validatorName = new helper_1.NameValidator(name);
-                const validatorEmail = new helper_1.EmailValidator(email);
-                const validatorPassword = new helper_1.PasswordValidator(password);
-                if (validatorName.fail) {
-                    throw validatorName.message;
-                }
-                else if (validatorEmail.fail) {
-                    throw validatorEmail.message;
-                }
-                else if (validatorPassword.fail) {
-                    throw validatorPassword.message;
-                }
+                new validators_1.NameValidator(name);
+                new validators_1.EmailValidator(email);
+                new validators_1.PasswordValidator(password);
                 const service = new accounts_1.default;
                 const response = yield service.SvCreate({ name, email, password });
                 if (!response) {
                     throw 'Error: Account creation error';
                 }
-                res.status(201).json({ message: "Sucess", code: 201, data: response, error: null });
+                API_response.data = response;
+                res.status(API_response.code).json(API_response);
             }
             catch (e) {
                 console.log(TAG, e);
-                res.status(400).json({ message: "Error", code: 400, data: null, error: e });
+                API_error.error = [e];
+                res.status(API_error.code).json(API_error);
             }
         });
     }
     update(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const API_response = {
+                message: 'Sucess',
+                code: 200,
+                data: {
+                    id: 0,
+                    email: '',
+                    name: ''
+                },
+                error: [null]
+            };
+            const API_error = {
+                message: 'Error',
+                code: 400,
+                data: null,
+                error: [null]
+            };
             try {
                 const { name, email, decoded } = req.body;
-                const validatorName = new helper_1.NameValidator(name);
-                const validatorEmail = new helper_1.EmailValidator(email);
-                if (validatorName.fail) {
-                    throw validatorName.message;
-                }
-                else if (validatorEmail.fail) {
-                    throw validatorEmail.message;
-                }
+                new validators_1.NameValidator(name);
+                new validators_1.EmailValidator(email);
                 let body = { name: name, email: email };
                 if (req.body.password != undefined) {
                     body.password = req.body.password;
-                    const validatorPassword = new helper_1.PasswordValidator(body.password);
-                    if (validatorPassword.fail) {
-                        throw validatorPassword.message;
-                    }
+                    new validators_1.PasswordValidator(body.password);
                 }
                 const service = new accounts_1.default;
                 const search = yield service.SvSearch(decoded.id);
                 if (!search) {
-                    return res.status(404).json({ message: "Error", code: 404, data: null, error: 'Error: Account Not Found.' });
+                    API_error.code = 404;
+                    API_error.error = ['Error: Account Not Found.'];
+                    return res.status(API_error.code).json(API_error);
                 }
                 const response = yield service.SvUpdate(search, body, decoded.id);
                 if (!response) {
-                    return res.status(400).json({ message: "Error", code: 400, data: null, error: 'Error: Internal error.' });
+                    API_error.error = ['Error: Internal error.'];
+                    return res.status(API_error.code).json(API_error);
                 }
-                res.status(200).json({ message: "Sucess", code: 200, data: response, error: null });
+                API_response.data = response;
+                res.status(API_response.code).json(API_response);
             }
             catch (e) {
                 console.log(TAG, e);
-                res.status(400).json({ message: "Error", code: 400, data: null, error: e });
+                API_error.error = [e];
+                return res.status(API_error.code).json(API_error);
             }
         });
     }
     login(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            const API_response = {
+                message: 'Sucess',
+                code: 200,
+                data: {
+                    id: 0
+                },
+                error: [null]
+            };
+            const API_error = {
+                message: 'Error',
+                code: 400,
+                data: null,
+                error: [null]
+            };
             try {
                 const { email, password } = req.body;
-                const validatorEmail = new helper_1.EmailValidator(email);
-                const validatorPassword = new helper_1.PasswordValidator(password);
-                if (validatorEmail.fail) {
-                    throw validatorEmail.message;
-                }
-                else if (validatorPassword.fail) {
-                    throw validatorPassword.message;
-                }
+                new validators_1.EmailValidator(email);
+                new validators_1.PasswordValidator(password);
                 const service = new accounts_1.default;
                 const response = yield service.SvLogin(email);
                 if (!response) {
-                    return res.status(404).json({ message: "Error", code: 404, data: null, error: 'Account Not Found' });
+                    API_error.code = 404;
+                    API_error.error = ['Error: Account Not Found'];
+                    return res.status(API_error.code).json(API_error);
                 }
                 if (response.password != password) {
-                    return res.status(403).json({ message: "Error", code: 403, data: null, error: 'Forbiden' });
+                    API_error.code = 403;
+                    API_error.error = ['Error: Forbiden'];
+                    return res.status(API_error.code).json(API_error);
                 }
                 const secretKey = process.env.JWTSECRET;
                 if (!secretKey) {
@@ -109,11 +142,16 @@ class account {
                 }
                 const jwt_cookie = jsonwebtoken_1.default.sign({ id: response.id }, secretKey);
                 res.cookie("session", jwt_cookie, { maxAge: 300000 });
-                res.status(200).json({ message: "Sucess", code: 200, data: { id: response.id }, error: null });
+                if (!API_response.data) {
+                    throw 'Error: Response error.';
+                }
+                API_response.data.id = response.id;
+                return res.status(API_response.code).json(API_response);
             }
             catch (e) {
                 console.log(TAG, e);
-                res.status(400).json({ message: "Error", code: 400, data: null, error: e });
+                API_error.error = [e];
+                return res.status(API_error.code).json(API_error);
             }
         });
     }
