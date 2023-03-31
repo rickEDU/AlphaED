@@ -41,16 +41,19 @@
       * [Nginx](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nginx.md)
       * [node.js](https://github.com/rickEDU/AlphaED/blob/main/Servidores/nodejs.md)
   * **Typescript**
-    * [Exercício 1](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex1)
-    * [Exercício 2](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex2)
-    * [Exercício 3](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex3)
+    * [Exercício 1: classe Validator](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex1)
+    * [Exercício 2: String, Number, Boolean Validator](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex2)
+    * [Exercício 3: CustomElement usando StringValidator](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex3)
     * Exercício 4:
-      * [Questão 1](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex4/q1)
-      * [Questão 2](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex4/q2)
+      * [Questão 1: Abstract Class](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex4/q1)
+      * [Questão 2: Herdar o Abstract Class, ligação do front TypeScript](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex4/q2)
       * [Server_exemplo: Questão 2](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex4/q2_server)
-    * [Exercício 5](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex5/q1)
+    * [Exercício 5: Webpack](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex5/q1)
+    * Exercício 6:
+      * [Questão 1: servidor Typescript](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex6/q1)
+      * [Questão 2: servidor Typescript, Postgres (accounts)](https://github.com/rickEDU/AlphaED/tree/main/Typescript/ex6/q2)
   * **Controle de Sessão**
-    * [Exercício 1](https://github.com/rickEDU/AlphaED/tree/main/Controle%20de%20sess%C3%A3o/controleEx1_q2)
-    * [Exercício 2](https://github.com/rickEDU/AlphaED/tree/main/Controle%20de%20sess%C3%A3o/controleEx2_q3)
+    * [Exercício 1: Cookie simples](https://github.com/rickEDU/AlphaED/tree/main/Controle%20de%20sess%C3%A3o/controleEx1_q2)
+    * [Exercício 2: JWT(cookie), senhas hash](https://github.com/rickEDU/AlphaED/tree/main/Controle%20de%20sess%C3%A3o/controleEx2_q3)
   * **Soft Skills**
     * [Requisitos da praça](https://github.com/rickEDU/AlphaED/blob/main/soft_skills/requisitos.md)
