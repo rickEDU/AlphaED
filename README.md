@@ -57,3 +57,5 @@
     * [Exercício 2: JWT(cookie), senhas hash](https://github.com/rickEDU/AlphaED/tree/main/Controle%20de%20sess%C3%A3o/controleEx2_q3)
   * **Soft Skills**
     * [Requisitos da praça](https://github.com/rickEDU/AlphaED/blob/main/soft_skills/requisitos.md)
+  * **React**
+    * [Exercício 1: react start com typescript](https://github.com/rickEDU/AlphaED/tree/main/React/ex1/my-app)
