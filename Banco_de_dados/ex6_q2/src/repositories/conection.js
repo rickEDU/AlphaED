@@ -4,19 +4,16 @@ TAG = "Connection: "
 
 exports.executarQuerys = async (querys)=> {
     const client = await pool.connect(); 
-    
     let results = [];
     try {
         await client.query("BEGIN");
-        /* console.log(querys) */
         for (let i = 0; i < querys.length; i++) {
             try {
                 const result = await client.query(querys[i].text, querys[i].values);
-                results.push(result);
+                results.push(result.rows[0]);
             } catch (err) {
                 console.log(err);
                 await client.query("ROLLBACK");
-                client.release();
                 throw err;
             }  
         }
@@ -26,6 +23,6 @@ exports.executarQuerys = async (querys)=> {
         console.log(err);
         throw err;
     } finally {
-    client.release();
+        client.release();
     }
 }

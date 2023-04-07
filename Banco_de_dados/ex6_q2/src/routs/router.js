@@ -3,6 +3,6 @@ const route = express.Router()
 const op = require('../controller/operators.js')
 
 
-route.post('/teste', op.insertProduct)
+route.post('/order', op.insertProduct)
 
 module.exports = route

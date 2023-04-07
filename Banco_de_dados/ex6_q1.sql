@@ -110,3 +110,42 @@ BEGIN
 END $$;
 
 COMMIT;
+
+
+-- função do banco de dados para adicionar um pedido a um usuário:
+CREATE OR REPLACE FUNCTION adicionar_lista_pedidos(id_input integer, produtos integer[])
+RETURNS TABLE (
+    lista_pedidos_id integer,
+    pedido_id integer,
+    pedido_status integer,
+    pedido_create_at date,
+    pedido_valor_total double precision) AS $$
+DECLARE 
+    lista_pedidos_id INTEGER;
+	id_produto INTEGER;
+BEGIN
+    -- insere a lista de pedidos e retorna o objeto resultante
+    INSERT INTO lista_pedidos(id_usuario, status, create_at)
+    VALUES (id_input, 1, NOW()) RETURNING id INTO lista_pedidos_id;
+
+    -- insere os produtos na lista de pedidos
+    FOREACH id_produto IN ARRAY produtos LOOP
+        INSERT INTO pedido(id_produto, id_lista)
+        VALUES (id_produto, lista_pedidos_id);
+    END LOOP;
+
+    -- atualiza o valor total da lista de pedidos
+    UPDATE lista_pedidos SET
+    valor_total = (
+        SELECT SUM(preco)
+        FROM pedido
+        INNER JOIN produto ON produto.id = pedido.id_produto
+        WHERE pedido.id_lista = lista_pedidos_id
+    ) WHERE id = lista_pedidos_id;
+
+    RETURN QUERY (
+        SELECT id, id_usuario, status, create_at, valor_total 
+        FROM lista_pedidos 
+        WHERE id = lista_pedidos_id);
+END;
+$$ LANGUAGE plpgsql;
