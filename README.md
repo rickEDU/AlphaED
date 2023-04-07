@@ -59,3 +59,6 @@
     * [Requisitos da praça](https://github.com/rickEDU/AlphaED/blob/main/soft_skills/requisitos.md)
   * **React**
     * [Exercício 1: react start com typescript](https://github.com/rickEDU/AlphaED/tree/main/React/ex1/my-app)
+* **Banco de dados**
+  * [Exercício 2: implementação do compra do banco eCommerce](https://github.com/rickEDU/AlphaED/tree/main/Banco_de_dados/ex6_q2)
+  * [Solução da compra com uma função no postgreSQL](https://github.com/rickEDU/AlphaED/blob/main/Banco_de_dados/ex6_q1.sql)
