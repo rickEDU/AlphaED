@@ -3,34 +3,32 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-interface IUser{
-  firstName:string;
-  lastName:string;
-  idade: number
-}
-const dataNascimento = new Date(1993,8,23)
-
-function calcularIdade(dataDeNascimento: Date):number {
-  const dataAtual: Date = new Date();
-  const diferencaEmMilissegundos = dataAtual.getTime() - dataDeNascimento.getTime();
-  const idadeEmAnos = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60 * 24 * 365.25));
-  return idadeEmAnos;
-}
-const user: IUser = {
-  firstName:'Eduardo',
-  lastName: 'Santos',
-  idade: calcularIdade(dataNascimento)
-}
-function formatName(user:IUser){
-  return user.firstName+' '+user.lastName;
-}
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <h1>Olá, meu nome é {formatName(user)}, tenho  {user.idade} anos e este é meu primeiro contato com JSX.</h1>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://reactjs.org" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </div>
   )
 }
