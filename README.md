@@ -32,6 +32,7 @@
   * Dia 21 : [questão](https://github.com/rickEDU/AlphaED/tree/main/JS/ex21) Class Avatar.
   * Dia 22 : [questão 1](https://github.com/rickEDU/AlphaED/tree/main/JS/ex22_A) Class Avatar com mais coisas.
   * Dia 22 : [questão 2](https://github.com/rickEDU/AlphaED/tree/main/JS/ex22_B) Class mago e cowboy, Herança.
+  * uteis: [uteis.ts](https://github.com/rickEDU/AlphaED/tree/main/JS/uteis.ts) Função para calcular a idade.
 
  * **Servidores**
     * [Principal](https://github.com/rickEDU/AlphaED/tree/main/Servidores)
