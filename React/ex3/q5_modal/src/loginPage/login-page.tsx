@@ -6,8 +6,7 @@ import Modal from '../modal/modal'
 function LoginPage() {
   const [modalIsOpen , setOpenModal] = useState(false);
 
-  function formSubmitted (event){
-    event.preventDefault();
+  function formSubmitted (){
     setOpenModal(true)
   }
   function closeModal(){
@@ -18,7 +17,10 @@ function LoginPage() {
     <div className="App">
       {modalIsOpen  && <Modal click={closeModal} />}
         <h1>FORM</h1>
-        <Form onSubmit={formSubmitted(event)}/>
+        <Form onSubmit={(event) => {
+      event.preventDefault();
+      formSubmitted()
+      }}/>
     </div>
   )
 }

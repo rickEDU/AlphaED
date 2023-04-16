@@ -1,0 +1,3 @@
+# Resposta:
+<p>O console.log está sendo execultado no segundo quadro, e o formulário tem acesso ao valor (true) no terceiro quadro.</p>
+<p>Isso acontece porque o método setIsSent utilizado pelo onSubmit não atualiza o estado de forma síncrona, enquanto o onSubmit está rodando o valor de isSent ainda é false, e é lá onde o console.log está sendo executado, o valor de isSent só irá mudar quando a função onSubmit encerrar, e assim na próxima rendirização o valor de isSent será atualizado.</p>

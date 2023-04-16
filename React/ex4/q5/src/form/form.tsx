@@ -2,21 +2,21 @@
 import '../App.css'
 
 type FormProps = {
-  onSubmit: (event:EventCounts) => void
+  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void
 }
 
 function Form(props: FormProps) {
 
   return (
     <div className="App">
-        <form action="">
+        <form onSubmit={props.onSubmit}>
           <label >email:</label>
           <input type="text" placeholder='email'/>
           <br />
           <label>senha:</label>
           <input type="text" placeholder='senha' />
           <br />
-          <button onClick={props.onSubmit}>Enviar</button>
+          <button type='submit'>Enviar</button>
         </form>
     </div>
   )
