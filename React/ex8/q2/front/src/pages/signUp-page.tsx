@@ -29,6 +29,7 @@ function SignUp() {
   
     async function connectionPatch(_name:string, _email:string, _password:string){
       const body = {name: _name, email: _email, password: _password}
+      console.log(body, "boddy")
       try{
         const options : RequestInit = {
           credentials: 'include',

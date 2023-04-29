@@ -10,7 +10,7 @@ export default class account{
 
     public async create(req:Request, res: Response){
         const API_response: APIResponse<IDataAPI> = {
-            message: 'Sucess',
+            message: 'Success',
             code: 201,
             data:{
                 id: 0,
@@ -44,7 +44,7 @@ export default class account{
 
     public async update(req:Request, res: Response){
         const API_response: APIResponse<IDataAPI> = {
-            message: 'Sucess',
+            message: 'Success',
             code: 200,
             data:{
                 id: 0,
@@ -89,7 +89,7 @@ export default class account{
     }
     public async login(req:Request, res: Response){
         const API_response: APIResponse<IResponseLogin> = {
-            message: 'Sucess',
+            message: 'Success',
             code: 200,
             data:{
                 id: 0,
@@ -112,12 +112,12 @@ export default class account{
             const response:IDataLogin|undefined = await service.SvLogin(email);
             if(!response){
                 API_error.code = 404;
-                API_error.error = ['Error: Account Not Found']
+                API_error.error = ['Error: Conta não encontrada']
                 return res.status(API_error.code).json(API_error)
             }
             if(response.password!=password){
                 API_error.code = 403;
-                API_error.error = ['Error: Forbiden']
+                API_error.error = ['Error: Senha Errada']
                 return res.status(API_error.code).json(API_error)
             }
             const secretKey:string | undefined = process.env.JWTSECRET 

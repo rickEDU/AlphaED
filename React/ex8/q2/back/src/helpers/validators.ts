@@ -29,9 +29,9 @@ export class PasswordValidator extends RegexValidator {
 export class NameValidator extends RegexValidator {
     constructor(data:any){
         //Regex abaixo comentado que pega um nome completo, com espaçose sem números:
-        // const data_regex: RegExp = new RegExp(/^([a-z]{1,})([ ]{1}[a-z]{1,}){0,}$/gim);
+        const data_regex: RegExp = new RegExp(/^([a-z]{1,})([ ]{1}[a-z]{1,}){0,}$/gim);
         //Esse regex abaixo pega um nome sem espaços, colocou espaços da erro: 
-        const data_regex: RegExp = new RegExp(/^[a-z]{1,}$/gim);
+        // const data_regex: RegExp = new RegExp(/^[a-z]{1,}$/gim);
         super(data, data_regex, 'Nome inválido');
     }
 }

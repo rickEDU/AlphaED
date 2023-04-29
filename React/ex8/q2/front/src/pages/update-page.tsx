@@ -17,7 +17,7 @@ function Update() {
   async function formSubmitted (event: React.FormEvent<HTMLFormElement>, body: IApiRequest){
       event.preventDefault()
       try{
-        const response = await connectionPatch( body.email, body.password)
+        const response = await connectionPatch( body.name!, body.email, body.password)
         if(response.error[0]!=null){
           setErase(false);
           setModalIsOpen(true);
@@ -32,9 +32,8 @@ function Update() {
       }
   }
 
-  async function connectionPatch( _email:string, _password:string){
- 
-    const body = {email: _email, password: _password}
+  async function connectionPatch( _name:string, _email:string, _password:string){
+    const body = {name:_name, email: _email, password: _password}
     try{
       const options : RequestInit = {
         credentials: 'include',
