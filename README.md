@@ -60,7 +60,7 @@
     * [Requisitos da praça](https://github.com/rickEDU/AlphaED/blob/main/soft_skills/requisitos.md)
   * **React**
     * [Exercício 1: react start com typescript](https://github.com/rickEDU/AlphaED/tree/main/React/ex1/my-app)
-    * [Exercício 2: Criação do componente Form](https://github.com/rickEDU/AlphaED/tree/main/React/ex2)
+    * [Exercício 2: Criação do componente Form, idade calculada pela data ](https://github.com/rickEDU/AlphaED/tree/main/React/ex2)
     * [Exercício 3: Carrinho com produtos / Login com Modal imcompleto](https://github.com/rickEDU/AlphaED/tree/main/React/ex3)
     * [Exercício 4: Contador, carrinho de produtos remoção implementada, Form com modal funcional](https://github.com/rickEDU/AlphaED/tree/main/React/ex4)
     * [Exercício 5: Carrinho de produtos com fetch API, LoginPage integrada a uma API](https://github.com/rickEDU/AlphaED/tree/main/React/ex5)
