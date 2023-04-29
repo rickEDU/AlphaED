@@ -60,6 +60,13 @@
     * [Requisitos da praça](https://github.com/rickEDU/AlphaED/blob/main/soft_skills/requisitos.md)
   * **React**
     * [Exercício 1: react start com typescript](https://github.com/rickEDU/AlphaED/tree/main/React/ex1/my-app)
+    * [Exercício 2: Criação do componente Form](https://github.com/rickEDU/AlphaED/tree/main/React/ex2)
+    * [Exercício 3: Carrinho com produtos / Login com Modal imcompleto](https://github.com/rickEDU/AlphaED/tree/main/React/ex3)
+    * [Exercício 4: Contador, carrinho de produtos remoção implementada, Form com modal funcional](https://github.com/rickEDU/AlphaED/tree/main/React/ex4)
+    * [Exercício 5: Carrinho de produtos com fetch API, LoginPage integrada a uma API](https://github.com/rickEDU/AlphaED/tree/main/React/ex5)
+    * [Exercício 6: Componentes MUI e Styled-components](https://github.com/rickEDU/AlphaED/tree/main/React/ex6/q7)
+    * [Exercício 7: LoginPage com ProfileCard e UpdateCard (useContext) + API](https://github.com/rickEDU/AlphaED/tree/main/React/ex7/q4)
+    * [Exercício 8: LoginPage, UpdatePage, SignUpPage e HomePage + Regras de negócio](https://github.com/rickEDU/AlphaED/tree/main/React/ex8/q2)
 * **Banco de dados**
   * [Exercício 2: implementação do compra do banco eCommerce](https://github.com/rickEDU/AlphaED/tree/main/Banco_de_dados/ex6_q2)
   * [Solução da compra com uma função no postgreSQL](https://github.com/rickEDU/AlphaED/blob/main/Banco_de_dados/ex6_q1.sql)
