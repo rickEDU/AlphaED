@@ -67,6 +67,7 @@
     * [Exercício 6: Componentes MUI e Styled-components](https://github.com/rickEDU/AlphaED/tree/main/React/ex6/q7)
     * [Exercício 7: LoginPage com ProfileCard e UpdateCard (useContext) + API](https://github.com/rickEDU/AlphaED/tree/main/React/ex7/q4)
     * [Exercício 8: LoginPage, UpdatePage, SignUpPage e HomePage + Regras de negócio](https://github.com/rickEDU/AlphaED/tree/main/React/ex8/q2)
+    * [Exercício 9: useRef, useMemo, Hook customizado](https://github.com/rickEDU/AlphaED/tree/main/React/ex9)
 * **Banco de dados**
   * [Exercício 2: implementação do compra do banco eCommerce](https://github.com/rickEDU/AlphaED/tree/main/Banco_de_dados/ex6_q2)
   * [Solução da compra com uma função no postgreSQL](https://github.com/rickEDU/AlphaED/blob/main/Banco_de_dados/ex6_q1.sql)
