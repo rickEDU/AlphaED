@@ -99,6 +99,3 @@ describe("teste se availableMovies está retornando corretamente com valores vá
         expect(availableMovies(movies, age)).toEqual(expected);
     })
 })
-
-
-

@@ -5,4 +5,4 @@ function availableMovies (movies, age){
     return allowedMovies;
 }
 
-module.exports =  availableMovies ;
+module.exports =  availableMovies;
