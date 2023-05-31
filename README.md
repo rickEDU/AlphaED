@@ -2,8 +2,8 @@
 
 ## Ciclo 1:
 * **JavaScript**
-  [Exercícios](https://github.com/rickEDU/AlphaED/tree/main/JS)
-  [Uteis](https://github.com/rickEDU/AlphaED/blob/main/JS/uteis.ts)
+  * [Exercícios](https://github.com/rickEDU/AlphaED/tree/main/JS)
+  * [Uteis](https://github.com/rickEDU/AlphaED/blob/main/JS/uteis.ts)
 
  * **Servidores**
     * [Principal](https://github.com/rickEDU/AlphaED/tree/main/Servidores)
