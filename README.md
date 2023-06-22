@@ -53,3 +53,9 @@
   * [exercício 3: testes de unidade, camada de serviço](https://github.com/rickEDU/AlphaED/tree/main/Testes/ex3/discountopia_q3)
 * **Docker**
   * [Relatórios](https://github.com/rickEDU/AlphaED/tree/main/Docker/relatorios)
+* **MongoDB**
+  * [Exercício de conecção JS ao MongoDB](https://github.com/rickEDU/AlphaED/tree/main/MongoDB/ex4)
+  * [Relatórios](https://github.com/rickEDU/AlphaED/tree/main/MongoDB/relat%C3%B3rios)
+* **Redis cache**
+  * [Exercício 2, conecção e uso do Redis para salvar dados em cache.](https://github.com/rickEDU/AlphaED/tree/main/Redis/ex2)
+  * [Relatórios](https://github.com/rickEDU/AlphaED/tree/main/Redis/relat%C3%B3rios)
