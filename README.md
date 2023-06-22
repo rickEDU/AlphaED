@@ -54,9 +54,7 @@
 * **Docker**
   * [Relatórios](https://github.com/rickEDU/AlphaED/tree/main/Docker/relatorios)
 * **Github Actions**
-  * [Exercício 1: Action de build](https://github.com/rickEDU/AlphaED/tree/main/Github_Actions/ex1)
-  * [Exercício 2: Action de build e teste, onde o teste só roda caso o build funcione](https://github.com/rickEDU/AlphaED/tree/main/Github_Actions/ex2)
-  * [Exercício 3: Action de build e teste, Homologação e Produção](https://github.com/rickEDU/AlphaED/tree/main/Github_Actions/ex3)
+  * [Exercício 3: Action de build e teste, Homologação e Produção](https://github.com/rickEDU/GitHubActions_ex2)
   * [Relatórios](https://github.com/rickEDU/AlphaED/tree/main/Github_Actions/)
 * **MongoDB**
   * [Exercício de conecção JS ao MongoDB](https://github.com/rickEDU/AlphaED/tree/main/MongoDB/ex4)
