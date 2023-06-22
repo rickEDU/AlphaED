@@ -48,11 +48,16 @@
     * [Exercício 8: LoginPage, UpdatePage, SignUpPage e HomePage + Regras de negócio](https://github.com/rickEDU/AlphaED/tree/main/React/ex8/q2)
     * [Exercício 9: useRef, useMemo, Hook customizado](https://github.com/rickEDU/AlphaED/tree/main/React/ex9)
 * **Testes**
-  * [exercício 1: testes básicos](https://github.com/rickEDU/AlphaED/tree/main/Testes/ex1)
-  * [exercício 2: testes de integração, rotas de um servidor](https://github.com/rickEDU/AlphaED/tree/main/Testes/ex2)
-  * [exercício 3: testes de unidade, camada de serviço](https://github.com/rickEDU/AlphaED/tree/main/Testes/ex3/discountopia_q3)
+  * [Exercício 1: testes básicos](https://github.com/rickEDU/AlphaED/tree/main/Testes/ex1)
+  * [Exercício 2: testes de integração, rotas de um servidor](https://github.com/rickEDU/AlphaED/tree/main/Testes/ex2)
+  * [Exercício 3: testes de unidade, camada de serviço](https://github.com/rickEDU/AlphaED/tree/main/Testes/ex3/discountopia_q3)
 * **Docker**
   * [Relatórios](https://github.com/rickEDU/AlphaED/tree/main/Docker/relatorios)
+* **Github Actions**
+  * [Exercício 1: Action de build](https://github.com/rickEDU/AlphaED/tree/main/Github_Actions/ex1)
+  * [Exercício 2: Action de build e teste, onde o teste só roda caso o build funcione](https://github.com/rickEDU/AlphaED/tree/main/Github_Actions/ex2)
+  * [Exercício 3: Action de build e teste, Homologação e Produção](https://github.com/rickEDU/AlphaED/tree/main/Github_Actions/ex3)
+  * [Relatórios](https://github.com/rickEDU/AlphaED/tree/main/Github_Actions/)
 * **MongoDB**
   * [Exercício de conecção JS ao MongoDB](https://github.com/rickEDU/AlphaED/tree/main/MongoDB/ex4)
   * [Relatórios](https://github.com/rickEDU/AlphaED/tree/main/MongoDB/relat%C3%B3rios)
